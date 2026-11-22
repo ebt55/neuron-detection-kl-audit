@@ -1,4 +1,4 @@
-# Neuron Explanations Capture Top Firings Better Than Where Downstream KL Lives
+# Neuron labels pass top-activation detection but miss most downstream effect
 
 Two-snippet binary detection (`own` label vs. distractor) drops steeply from top firings (`p99.9+`) to intermediate and weak activations where most exact `float32` mean-ablation KL divergence lives on dense `Qwen/Qwen3-4B` (`n = 278` scored Ulto85 neurons, `424` active poles) and `Qwen/Qwen3-1.7B` (`n = 50` neurons: `40` held-out + `10` pilot, `100` poles).
 
@@ -6,9 +6,22 @@ Two-snippet binary detection (`own` label vs. distractor) drops steeply from top
 
 ## Summary
 
+In Goodfire's detection test, a judge reads a neuron label and two snippets and picks where the neuron fires. Goodfire reports accuracy above 0.91 on a large mixture-of-experts model. I ran the same test across activation bands on two small dense models: Qwen3-4B with Ulto85's published labels and Qwen3-1.7B with my own. I added blank-label and wrong-label floors on Qwen3-1.7B and measured each band's share of downstream effect. On Qwen3-4B, accuracy starts at 0.84 on top activations and drops to chance below, while that top band holds 29% of the effect. Weighted by downstream effect, lift over chance falls from 0.68 to 0.35 on Qwen3-4B, and from 0.56 to 0.40 on Qwen3-1.7B. Nearly a third of Qwen3-4B neurons score perfectly on detection, yet their causal recovery spans strongly negative values up to 0.91. Because labels, judge, and models differ, Goodfire's figure does not carry over here, though this does not show it is wrong.
+
 ## Takeaways
 
+- A high detection score on top activations says little about most of what a neuron does.
+- Passing detection does not tell you the label can stand in for the neuron, while failing it does: none of the 43 failing neurons reach 0.25 causal recovery, against about one in ten overall.
+- On Qwen3-1.7B, a bare token list scores within 0.03 of the label, and twenty examples beat the label outright at 0.88.
+- What I could not show: the weak-band detection test is partly unanswerable by design, the Qwen3-1.7B causal check was inconclusive, and the Qwen3-4B audit was exploratory.
+
 ## What I saw reading the poles
+
+When I read Ulto85's info example (layer 0, neuron 9209, perfect detection and high recovery), the label described the standalone word for information and related prefixes. Its top snippets hit "info" and "INFO", alongside weaker top hits on "infinity", "informant", and "_STATS", and the judge got all five right. In the weaker band, I saw unrelated words like "to", "for", "investors", and "about" that the label never mentions.
+
+I saw a sharper split on Ulto85's PCR example (layer 0, neuron 8146, perfect detection and negative recovery), whose label predicts uppercase acronyms, especially those starting with P or C. All five top snippets hit uppercase acronyms ("PCs", "PC", "GDPR", and "GP"), and the judge got every pair right. In the weaker band, the marked tokens were plain words ("incredible", "steel", "helped", "of", and "hunter") that the label misses, and the judge got three of five wrong.
+
+On a neuron that fails detection (layer 16, neuron 2492), the label describes technical terms being introduced or defined. Even in the top band, I saw only one clear fit ("Fossil" in a passage on fossil fuels), while the other four fired on "IV", "Communities", "scar", and a typo fragment. In the weaker band, the marked tokens were ordinary words like "play", "know", and "some" in unrelated prose, and the judge missed four of five.
 
 ## Glossary
 
@@ -50,7 +63,7 @@ Across `278` scored `Qwen/Qwen3-4B` neurons (`gpt-6.1-terra@none`), `0 of 43` fa
 | `Qwen3-4B` (neuron means) | `Qwen/Qwen3-4B` (dense) | Ulto85 Claude / `gpt-6.1-terra@none` (1/call) | 424 (278) | 0.613 | 0.686 | 0.839 | 0.897 (`top100`) |
 | `Qwen3-1.7B` (`heldout_80`, per-neuron) | `Qwen/Qwen3-1.7B` (dense) | `gpt-4.1` / `gpt-6.1-terra@none` (1/call) | 80 (40) | 0.594 | 0.659 | 0.777 | — |
 
-*Caption: Goodfire evaluates routed MoE activations (`a * w_router`) using Goodfire Neuron Scientist mode descriptions, `Opus 5.5` in 10-pair batches, and random-text distractors; our evaluations use dense SwiGLU activations, Ulto85 Claude (`4B`: `0.828`/`0.888` per-pole vs. `0.839`/`0.897` per-neuron) or `gpt-4.1` (`1.7B`: `0.679` per-pole vs. `0.659` per-neuron at `p99–99.9`) labels, `gpt-6.1-terra@none` at 1 pair per call, and `dead_zone` distractors.*
+*Caption: Goodfire evaluates routed MoE activations (`a * w_router`) using Goodfire Neuron Scientist mode descriptions, `Opus 5.5` in 10-pair batches, and random-text distractors; these evaluations use dense SwiGLU activations, Ulto85 Claude (`4B`: `0.828`/`0.888` per-pole vs. `0.839`/`0.897` per-neuron) or `gpt-4.1` (`1.7B`: `0.679` per-pole vs. `0.659` per-neuron at `p99–99.9`) labels, `gpt-6.1-terra@none` at 1 pair per call, and `dead_zone` distractors.*
 
 ## Related Work
 
@@ -58,7 +71,7 @@ Across `278` scored `Qwen/Qwen3-4B` neurons (`gpt-6.1-terra@none`), `0 of 43` fa
 - **Leo Gao**, [*Neural networks are not already clean*](https://www.lesswrong.com/posts/Dkh7pXKjoNWkkxQDz/neural-networks-are-not-already-clean): argues clean top examples do not show a neuron is understood, and that weak activations probably cannot be ignored.
 - **Aayan Rizvi**, [`Ulto85/neurons-kinda-clean`](https://github.com/Ulto85/neurons-kinda-clean) (commit `85c71b7`, MIT): showed Claude labels often fail full-distribution causal substitution, a clean rating is necessary but not sufficient, and introduced the `info`, `PCR`, and `insurance` examples.
 - **Stepan Shabalin & Mateusz Piotrowski**, *Comparing Sparsified MLPs and Transcoders: Many Transcoder Features Are Neurons in Disguise* (`arXiv:2610.24521`, 2026): found that transcoder features aligned with single MLP neurons are the ones with a stable link to the MLP, so neurons may be a stronger basis than assumed.
-- **What is new here:** We measure marked-token two-snippet 2AFC detection across activation bands and weight detection lift directly by exact `float32` mean-ablation KL divergence and causal recovery across dense `Qwen3-4B` and `Qwen3-1.7B`.
+- **What is new here:** I measure marked-token two-snippet 2AFC detection across activation bands and weight detection lift by mean-ablation KL divergence and causal recovery across dense `Qwen3-4B` and `Qwen3-1.7B`.
 
 ## Part 1 Held-Out Predictions
 
