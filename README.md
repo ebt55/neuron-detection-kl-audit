@@ -1,18 +1,18 @@
-# Neuron labels pass top-activation detection but miss most downstream effect
+# How much of a neuron does a detection score cover?
 
-Two-snippet binary detection (`own` label vs. distractor) drops steeply from top firings (`p99.9+`) to intermediate and weak activations where most exact `float32` mean-ablation KL divergence lives on dense `Qwen/Qwen3-4B` (`n = 278` scored Ulto85 neurons, `424` active poles) and `Qwen/Qwen3-1.7B` (`n = 50` neurons: `40` held-out + `10` pilot, `100` poles).
+On Qwen3-4B and Qwen3-1.7B, neuron labels score 0.78 to 0.84 on Goodfire's detection test for the strongest activations, which carry 29 to 41% of the neuron's downstream effect; below them accuracy falls toward chance.
 
 ![Detection accuracy vs. exact float32 KL share by band](figures/main_detection_vs_kl_by_band.png)
 
 ## Summary
 
-In Goodfire's detection test, a judge reads a neuron label and two snippets and picks where the neuron fires. Goodfire reports accuracy above 0.91 on a large mixture-of-experts model. I ran the same test across activation bands on two small dense models: Qwen3-4B with Ulto85's published labels and Qwen3-1.7B with my own. I added blank-label and wrong-label floors on Qwen3-1.7B and measured each band's share of downstream effect. On Qwen3-4B, accuracy starts at 0.84 on top activations and drops to chance below, while that top band holds 29% of the effect. Weighted by downstream effect, lift over chance falls from 0.68 to 0.35 on Qwen3-4B, and from 0.56 to 0.40 on Qwen3-1.7B. Nearly a third of Qwen3-4B neurons score perfectly on detection, yet their causal recovery spans strongly negative values up to 0.91. Because labels, judge, and models differ, Goodfire's figure does not carry over here, though this does not show it is wrong.
+In Goodfire's detection test, a judge reads a neuron label and two snippets and picks where the neuron fires. Goodfire reports accuracy between 0.91 and 0.97 on a large mixture-of-experts model. I ran the same test across activation bands on two small dense models: Qwen3-4B with Ulto85's published labels and Qwen3-1.7B with labels I generated with gpt-4.1. I added blank-label and wrong-label floors on Qwen3-1.7B and measured each band's share of downstream effect. On Qwen3-4B, accuracy is 0.84 on top activations and falls to 0.66, 0.55 and 0.50 in the bands below, while that top band holds 29% of the effect. Weighted by downstream effect, lift over chance falls from 0.68 to 0.35 on Qwen3-4B, and from 0.56 to 0.40 on Qwen3-1.7B. Nearly a third of Qwen3-4B neurons score perfectly on detection, yet their causal recovery (Ulto85's scores) spans strongly negative values up to 0.91. Because labels, judge, and models differ, Goodfire's figure does not carry over here, though this does not show it is wrong.
 
 ## Takeaways
 
 - A high detection score on top activations says little about most of what a neuron does.
-- Passing detection does not tell you the label can stand in for the neuron, while failing it does: none of the 43 failing neurons reach 0.25 causal recovery, against about one in ten overall.
-- On Qwen3-1.7B, a bare token list scores within 0.03 of the label, and twenty examples beat the label outright at 0.88.
+- Passing detection does not tell you the label can stand in for the neuron, while failing it is a bad sign: none of the 43 failing neurons reach 0.25 causal recovery, against about one in ten overall.
+- On Qwen3-1.7B, a bare token list scores within 0.03 of the label, and twenty examples beat the label, 0.88 against 0.78.
 - What I could not show: the weak-band detection test is partly unanswerable by design, the Qwen3-1.7B causal check was inconclusive, and the Qwen3-4B audit was exploratory.
 
 ## What I saw reading the poles
