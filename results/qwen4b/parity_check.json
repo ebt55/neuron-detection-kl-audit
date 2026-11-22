@@ -1,0 +1,179 @@
+{
+  "passed": true,
+  "split_exact_pass": true,
+  "gpu_hook_pass": true,
+  "vram_pass": true,
+  "cuda_vs_cpu_bf16_min_cos": 0.999711,
+  "checks": {
+    "vram_under_limit": true,
+    "hook_identity_under_tol": true,
+    "cpu_two_half_bit_exact": true,
+    "gpu_vs_cpu_ref_cosine_ok": true
+  },
+  "model_dtype": "torch.bfloat16",
+  "compute_device": "cuda",
+  "split_layer_idx": 18,
+  "num_layers": 36,
+  "hook_layers": [
+    0,
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    28,
+    32,
+    35
+  ],
+  "parity_batch_shape": [
+    2,
+    32
+  ],
+  "max_vram_limit_gb": 6.5,
+  "peak_vram_allocated_gb": 4.2852,
+  "peak_vram_reserved_gb": 4.3711,
+  "parity_batch_vram": {
+    "peak_half1_allocated_gb": 4.1786,
+    "peak_half1_reserved_gb": 4.1973,
+    "peak_half2_allocated_gb": 3.4551,
+    "peak_half2_reserved_gb": 3.4727
+  },
+  "extraction_microbatch_vram": {
+    "batch_shape": [
+      16,
+      128
+    ],
+    "peak_half1_allocated_gb": 4.2852,
+    "peak_half1_reserved_gb": 4.3711,
+    "peak_half2_allocated_gb": 3.5605,
+    "peak_half2_reserved_gb": 3.6465
+  },
+  "hook_tol": 0.0001,
+  "max_hook_identity_err": 0.0,
+  "hook_identity_err_by_layer": {
+    "0": 0.0,
+    "4": 0.0,
+    "8": 0.0,
+    "12": 0.0,
+    "16": 0.0,
+    "20": 0.0,
+    "24": 0.0,
+    "28": 0.0,
+    "32": 0.0,
+    "35": 0.0
+  },
+  "total_quad_sign_mismatches": 0,
+  "max_cpu_two_half_err": 0.0,
+  "min_cosine_required": 0.9995,
+  "worst_all_neurons_cosine": 0.9997327312725298,
+  "worst_all_neurons_max_abs_err": 32.0,
+  "worst_tracked_neurons_cosine": 0.999710871448862,
+  "per_layer_all_neurons": {
+    "0": {
+      "max_abs_err": 0.03125,
+      "mean_abs_err": 8.236993286804331e-05,
+      "cosine_similarity": 0.9999884409093388
+    },
+    "4": {
+      "max_abs_err": 0.09375,
+      "mean_abs_err": 0.0002997285024194677,
+      "cosine_similarity": 0.9999436234015935
+    },
+    "8": {
+      "max_abs_err": 0.125,
+      "mean_abs_err": 0.0013785979672266777,
+      "cosine_similarity": 0.999883545457094
+    },
+    "12": {
+      "max_abs_err": 0.75,
+      "mean_abs_err": 0.001559031252138778,
+      "cosine_similarity": 0.999853434093333
+    },
+    "16": {
+      "max_abs_err": 32.0,
+      "mean_abs_err": 0.001791583441106999,
+      "cosine_similarity": 0.9999997716524321
+    },
+    "20": {
+      "max_abs_err": 0.15625,
+      "mean_abs_err": 0.0019733263013129196,
+      "cosine_similarity": 0.9997582492871079
+    },
+    "24": {
+      "max_abs_err": 0.484375,
+      "mean_abs_err": 0.0028197941721218533,
+      "cosine_similarity": 0.9998403206819397
+    },
+    "28": {
+      "max_abs_err": 1.21875,
+      "mean_abs_err": 0.004498535231991204,
+      "cosine_similarity": 0.9997739089140247
+    },
+    "32": {
+      "max_abs_err": 2.0,
+      "mean_abs_err": 0.0066093069827065235,
+      "cosine_similarity": 0.9997391423145005
+    },
+    "35": {
+      "max_abs_err": 26.0,
+      "mean_abs_err": 0.010524150307233448,
+      "cosine_similarity": 0.9997327312725298
+    }
+  },
+  "per_layer_tracked_neurons": {
+    "0": {
+      "max_abs_err": 0.001953125,
+      "mean_abs_err": 7.904769362150026e-05,
+      "cosine_similarity": 0.9999840440320625
+    },
+    "4": {
+      "max_abs_err": 0.013671875,
+      "mean_abs_err": 0.0003196137882436493,
+      "cosine_similarity": 0.9999112329127108
+    },
+    "8": {
+      "max_abs_err": 0.025390625,
+      "mean_abs_err": 0.0014143145027836518,
+      "cosine_similarity": 0.9998785889681738
+    },
+    "12": {
+      "max_abs_err": 0.04296875,
+      "mean_abs_err": 0.0015297720070790361,
+      "cosine_similarity": 0.9997621538754007
+    },
+    "16": {
+      "max_abs_err": 0.02734375,
+      "mean_abs_err": 0.0018515590511794602,
+      "cosine_similarity": 0.999710871448862
+    },
+    "20": {
+      "max_abs_err": 0.0234375,
+      "mean_abs_err": 0.0017009590353284562,
+      "cosine_similarity": 0.9997567823833279
+    },
+    "24": {
+      "max_abs_err": 0.0546875,
+      "mean_abs_err": 0.002515294123440981,
+      "cosine_similarity": 0.9998324830515678
+    },
+    "28": {
+      "max_abs_err": 0.140625,
+      "mean_abs_err": 0.004466974874958396,
+      "cosine_similarity": 0.9998085099408206
+    },
+    "32": {
+      "max_abs_err": 0.5,
+      "mean_abs_err": 0.006013796232374651,
+      "cosine_similarity": 0.999894731452901
+    },
+    "35": {
+      "max_abs_err": 0.25390625,
+      "mean_abs_err": 0.009469492427472557,
+      "cosine_similarity": 0.9997551193104895
+    }
+  },
+  "ref_cpu_sec": 5.254,
+  "gpu_parity_sec": 3.458,
+  "elapsed_sec": 16.999
+}

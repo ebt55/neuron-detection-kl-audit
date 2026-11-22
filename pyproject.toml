@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "w-audit"
+version = "0.1.0"
+description = "Empirical audit of two-snippet neuron detection against causal recovery on Qwen3-1.7B and Qwen3-4B."
+requires-python = ">=3.11"
+dependencies = [
+    "transformers>=4.51.0",
+    "datasets>=3.0.0",
+    "openai>=1.60.0",
+    "scipy>=1.13.0",
+    "matplotlib>=3.9.0",
+    "numpy>=1.26.0",
+    "pyarrow>=18.0.0",
+    "safetensors>=0.4.5",
+    "httpx>=0.27.0",
+    "python-dotenv>=1.0.0",
+    "tqdm>=4.66.0",
+    "huggingface-hub>=0.30.0",
+    "tokenizers>=0.21.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+]
+
+[project.scripts]
+w-audit = "w_audit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"

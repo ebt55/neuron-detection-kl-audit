@@ -1,0 +1,19 @@
+{
+  "all_hard_invariants_passed": true,
+  "n_neurons": 50,
+  "n_poles": 100,
+  "e3_ordinary_n_windows": 128,
+  "e3_ordinary_win_len": 64,
+  "e3_ordinary_unique_odd_docs": 128,
+  "e3_ordinary_even_doc_leaks": 0,
+  "sim_windows_total": 3200,
+  "sim_windows_even_doc_leaks": 0,
+  "fpr_probes_total": 2400,
+  "fpr_probes_core": 1200,
+  "fpr_probes_luna_extra": 1200,
+  "fpr_even_doc_leaks": 0,
+  "fpr_bos_leaks": 0,
+  "fpr_window_errors": 0,
+  "fpr_within_pole_dup_docs": 0,
+  "elapsed_sec": 22.42
+}

@@ -1,0 +1,223 @@
+{
+  "probes": {
+    "gpt-4o-mini": {
+      "model": "gpt-4o-mini",
+      "ok": true,
+      "latency_ms": 2750.9,
+      "logprobs_supported": true,
+      "sample_output": "A",
+      "top_logprobs": [
+        {
+          "A": 0.0
+        },
+        {
+          "B": -19.875
+        },
+        {
+          " A": -21.0
+        },
+        {
+          "\u0410": -25.625
+        },
+        {
+          "C": -26.5
+        }
+      ],
+      "prompt_tokens": 26,
+      "completion_tokens": 1,
+      "limit_requests": 5000,
+      "remaining_requests": 4999,
+      "reset_requests": "12ms",
+      "limit_tokens": 2000000,
+      "remaining_tokens": 1999982,
+      "reset_tokens": "0s",
+      "raw_ratelimit_headers": {
+        "x-ratelimit-limit-requests": "5000",
+        "x-ratelimit-limit-tokens": "2000000",
+        "x-ratelimit-remaining-requests": "4999",
+        "x-ratelimit-remaining-tokens": "1999982",
+        "x-ratelimit-reset-requests": "12ms",
+        "x-ratelimit-reset-tokens": "0s"
+      },
+      "error": null
+    },
+    "gpt-4.1-mini": {
+      "model": "gpt-4.1-mini",
+      "ok": true,
+      "latency_ms": 827.0,
+      "logprobs_supported": true,
+      "sample_output": "A",
+      "top_logprobs": [
+        {
+          "A": 0.0
+        },
+        {
+          "B": -21.125
+        },
+        {
+          " A": -22.75
+        },
+        {
+          "Acknowled": -27.25
+        },
+        {
+          "_A": -27.25
+        }
+      ],
+      "prompt_tokens": 26,
+      "completion_tokens": 1,
+      "limit_requests": 5000,
+      "remaining_requests": 4999,
+      "reset_requests": "12ms",
+      "limit_tokens": 2000000,
+      "remaining_tokens": 1999982,
+      "reset_tokens": "0s",
+      "raw_ratelimit_headers": {
+        "x-ratelimit-limit-requests": "5000",
+        "x-ratelimit-limit-tokens": "2000000",
+        "x-ratelimit-remaining-requests": "4999",
+        "x-ratelimit-remaining-tokens": "1999982",
+        "x-ratelimit-reset-requests": "12ms",
+        "x-ratelimit-reset-tokens": "0s"
+      },
+      "error": null
+    }
+  },
+  "workloads": [
+    {
+      "name": "label_generation",
+      "model": "gpt-4.1-mini",
+      "num_calls": 100,
+      "avg_input_tokens": 1800,
+      "avg_output_tokens": 40,
+      "total_input_tokens": 180000,
+      "total_output_tokens": 4000,
+      "estimated_cost_usd": 0.0784,
+      "effective_rpm": 869.6,
+      "eta_minutes": 0.1,
+      "fits_rpm_tpm_within_hours": 0.0,
+      "exceeds_tier1_10k_rpd": false,
+      "notes": "100 poles x 20 top-band snippets (1 call/pole)"
+    },
+    {
+      "name": "pilot_20poles",
+      "model": "gpt-4o-mini",
+      "num_calls": 1920,
+      "avg_input_tokens": 450,
+      "avg_output_tokens": 2,
+      "total_input_tokens": 864000,
+      "total_output_tokens": 3840,
+      "estimated_cost_usd": 0.1319,
+      "effective_rpm": 3539.8,
+      "eta_minutes": 0.5,
+      "fits_rpm_tpm_within_hours": 0.01,
+      "exceeds_tier1_10k_rpd": false,
+      "notes": "20 poles (incl. L4 control) x 4 bands x 4 conds x 6 pairs"
+    },
+    {
+      "name": "toy_60poles",
+      "model": "gpt-4o-mini",
+      "num_calls": 3240,
+      "avg_input_tokens": 450,
+      "avg_output_tokens": 2,
+      "total_input_tokens": 1458000,
+      "total_output_tokens": 6480,
+      "estimated_cost_usd": 0.2226,
+      "effective_rpm": 3539.8,
+      "eta_minutes": 0.9,
+      "fits_rpm_tpm_within_hours": 0.02,
+      "exceeds_tier1_10k_rpd": false,
+      "notes": "60 poles x 3 bands x 3 conds x 6 pairs (fallback)"
+    },
+    {
+      "name": "core_grid",
+      "model": "gpt-4o-mini",
+      "num_calls": 9600,
+      "avg_input_tokens": 450,
+      "avg_output_tokens": 2,
+      "total_input_tokens": 4320000,
+      "total_output_tokens": 19200,
+      "estimated_cost_usd": 0.6595,
+      "effective_rpm": 3539.8,
+      "eta_minutes": 2.7,
+      "fits_rpm_tpm_within_hours": 0.05,
+      "exceeds_tier1_10k_rpd": false,
+      "notes": "100 poles x 4 bands x 4 conds x 6 pairs"
+    },
+    {
+      "name": "core_top_p90_cmp",
+      "model": "gpt-4o-mini",
+      "num_calls": 2400,
+      "avg_input_tokens": 450,
+      "avg_output_tokens": 2,
+      "total_input_tokens": 1080000,
+      "total_output_tokens": 4800,
+      "estimated_cost_usd": 0.1649,
+      "effective_rpm": 3539.8,
+      "eta_minutes": 0.7,
+      "fits_rpm_tpm_within_hours": 0.01,
+      "exceeds_tier1_10k_rpd": false,
+      "notes": "100 poles x top band (<p90 distractor) x 4 conds x 6 pairs"
+    },
+    {
+      "name": "neighbour_arm",
+      "model": "gpt-4o-mini",
+      "num_calls": 4800,
+      "avg_input_tokens": 450,
+      "avg_output_tokens": 2,
+      "total_input_tokens": 2160000,
+      "total_output_tokens": 9600,
+      "estimated_cost_usd": 0.3298,
+      "effective_rpm": 3539.8,
+      "eta_minutes": 1.4,
+      "fits_rpm_tpm_within_hours": 0.02,
+      "exceeds_tier1_10k_rpd": false,
+      "notes": "100 poles x 2 bands x 4 conds x 6 pairs"
+    },
+    {
+      "name": "second_judge_1500",
+      "model": "gpt-4.1-mini",
+      "num_calls": 1500,
+      "avg_input_tokens": 450,
+      "avg_output_tokens": 2,
+      "total_input_tokens": 675000,
+      "total_output_tokens": 3000,
+      "estimated_cost_usd": 0.2748,
+      "effective_rpm": 3539.8,
+      "eta_minutes": 0.4,
+      "fits_rpm_tpm_within_hours": 0.01,
+      "exceeds_tier1_10k_rpd": false,
+      "notes": "30 poles (subset ~1,500 calls)"
+    },
+    {
+      "name": "second_judge_3000",
+      "model": "gpt-4.1-mini",
+      "num_calls": 2880,
+      "avg_input_tokens": 450,
+      "avg_output_tokens": 2,
+      "total_input_tokens": 1296000,
+      "total_output_tokens": 5760,
+      "estimated_cost_usd": 0.5276,
+      "effective_rpm": 3539.8,
+      "eta_minutes": 0.8,
+      "fits_rpm_tpm_within_hours": 0.01,
+      "exceeds_tier1_10k_rpd": false,
+      "notes": "30 poles x 4 bands x 4 conds x 6 pairs (~3,000 calls)"
+    }
+  ],
+  "summary": {
+    "assuming_prompt_cache_hit_rate": 0.0,
+    "inferred_tier": "Tier 2+ (5,000+ RPM / 2M+ TPM \u2014 no Tier-1 10k RPD cap)",
+    "total_calls_full_plan": 19780,
+    "calls_by_model": {
+      "gpt-4.1-mini": 2980,
+      "gpt-4o-mini": 16800
+    },
+    "core_plus_neighbour_4o_mini_calls": 14400,
+    "total_estimated_cost_usd": 1.7602,
+    "embedding_dedup_cost_usd": 0.001,
+    "total_eta_minutes_sequential": 5.7,
+    "tier1_10k_rpd_warning": false,
+    "recommendation": "Full sweep (19,780 calls, ~$1.76 at 0% cache, ~5.7 min) fits comfortably within live limits (5,000 RPM / 2,000,000 TPM)."
+  }
+}

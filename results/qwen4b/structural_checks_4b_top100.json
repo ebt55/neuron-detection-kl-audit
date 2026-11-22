@@ -1,0 +1,59 @@
+{
+  "all_hard_invariants_passed": true,
+  "band": "top100",
+  "n_neurons": 278,
+  "n_active_poles": 424,
+  "total_pairs": 8480,
+  "target_pairs": 8480,
+  "full_poles": 424,
+  "expected_window_tokens": 69,
+  "expected_target_offset": 60,
+  "window_length_exact_rate": 1.0,
+  "target_offset_exact_rate": 1.0,
+  "bos_pos0_leak_count": 0,
+  "same_doc_leak_count": 0,
+  "pos_same_doc_within_pole_count": 0,
+  "dist_same_doc_within_pole_count": 0,
+  "min_allowed_doc_id": 60000,
+  "min_observed_doc_id": 60000,
+  "max_observed_doc_id": 64789,
+  "ulto85_doc_overlap_count": 0,
+  "pos_ineligible_count": 0,
+  "dist_abs_ge_p25_count": 0,
+  "dist_window_ge_p90_count": 0,
+  "suffix_dup_within_pole_pos_count": 0,
+  "pos_slot_balance": {
+    "slot_A_count": 4240,
+    "slot_B_count": 4240,
+    "slot_A_rate": 0.5
+  },
+  "nested_ab_balance": {
+    "imbalanced_full_poles": 0,
+    "imbalanced_half_0_poles": 0,
+    "imbalanced_half_1_poles": 0,
+    "imbalanced_floor_6_poles": 0
+  },
+  "top100_pool_summary": {
+    "max_doc_rank_scanned_across_poles": 101,
+    "total_suffix_dups_skipped": 12,
+    "pool_min_frac_of_max_stats": {
+      "min": 0.01683467741935484,
+      "p10": 0.09911327722432155,
+      "p25": 0.16901520245032123,
+      "median": 0.2590665316531653,
+      "p75": 0.3709992439516129,
+      "max": 0.6411483253588517
+    },
+    "sampled_20_min_frac_of_max_stats": {
+      "min": 0.01784274193548387,
+      "p10": 0.10099668560606061,
+      "p25": 0.16921973727968073,
+      "median": 0.2611663218560662,
+      "p75": 0.3752540650406504,
+      "max": 0.6507177033492823
+    },
+    "n_poles_pool_min_ge_20pct_max": 281,
+    "n_poles_pool_min_lt_20pct_max": 143
+  },
+  "elapsed_sec": 39.39
+}

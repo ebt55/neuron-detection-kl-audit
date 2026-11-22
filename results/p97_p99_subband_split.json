@@ -1,0 +1,1779 @@
+{
+  "primary_judge": "gpt-6.1-terra@none",
+  "judges_reported": [
+    "gpt-6.1-terra@none",
+    "gpt-6-luna@none"
+  ],
+  "verification": {
+    "source": "results/p97_p99_subband_split.json",
+    "n_poles_with_thresholds": 100,
+    "all_strictly_ordered": true,
+    "max_abs_err_vs_poles_json": 0.0,
+    "out_of_range_count": 0,
+    "missing_threshold_count": 0,
+    "partition_checks": {
+      "heldout_80": {
+        "n_p97_99": 344,
+        "n_p99_99.9": 136,
+        "n_total": 480,
+        "exact_sum_match": true
+      },
+      "pilot_20": {
+        "n_p97_99": 87,
+        "n_p99_99.9": 33,
+        "n_total": 120,
+        "exact_sum_match": true
+      },
+      "all_100": {
+        "n_p97_99": 431,
+        "n_p99_99.9": 169,
+        "n_total": 600,
+        "exact_sum_match": true
+      }
+    }
+  },
+  "pole_thresholds": {
+    "L04_N2467_pos": {
+      "layer": 4,
+      "neuron": 2467,
+      "sign": 1,
+      "in_pilot": true,
+      "p97": 0.267578125,
+      "p99": 0.3515625,
+      "p99.9": 0.578125
+    },
+    "L04_N2467_neg": {
+      "layer": 4,
+      "neuron": 2467,
+      "sign": -1,
+      "in_pilot": true,
+      "p97": 0.12890625,
+      "p99": 0.2021484375,
+      "p99.9": 2.1875
+    },
+    "L04_N3979_pos": {
+      "layer": 4,
+      "neuron": 3979,
+      "sign": 1,
+      "in_pilot": true,
+      "p97": 0.2001953125,
+      "p99": 0.283203125,
+      "p99.9": 0.47265625
+    },
+    "L04_N3979_neg": {
+      "layer": 4,
+      "neuron": 3979,
+      "sign": -1,
+      "in_pilot": true,
+      "p97": 0.193359375,
+      "p99": 0.271484375,
+      "p99.9": 0.431640625
+    },
+    "L04_N1865_pos": {
+      "layer": 4,
+      "neuron": 1865,
+      "sign": 1,
+      "in_pilot": true,
+      "p97": 0.224609375,
+      "p99": 0.337890625,
+      "p99.9": 1.1171875
+    },
+    "L04_N1865_neg": {
+      "layer": 4,
+      "neuron": 1865,
+      "sign": -1,
+      "in_pilot": true,
+      "p97": 0.232421875,
+      "p99": 0.328125,
+      "p99.9": 1.203125
+    },
+    "L04_N0920_pos": {
+      "layer": 4,
+      "neuron": 920,
+      "sign": 1,
+      "in_pilot": true,
+      "p97": 0.1337890625,
+      "p99": 0.2099609375,
+      "p99.9": 0.458984375
+    },
+    "L04_N0920_neg": {
+      "layer": 4,
+      "neuron": 920,
+      "sign": -1,
+      "in_pilot": true,
+      "p97": 0.1630859375,
+      "p99": 0.248046875,
+      "p99.9": 0.455078125
+    },
+    "L04_N4673_pos": {
+      "layer": 4,
+      "neuron": 4673,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.3203125,
+      "p99": 0.443359375,
+      "p99.9": 0.7109375
+    },
+    "L04_N4673_neg": {
+      "layer": 4,
+      "neuron": 4673,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.23046875,
+      "p99": 0.3359375,
+      "p99.9": 0.7734375
+    },
+    "L04_N3614_pos": {
+      "layer": 4,
+      "neuron": 3614,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.28515625,
+      "p99": 0.376953125,
+      "p99.9": 1.234375
+    },
+    "L04_N3614_neg": {
+      "layer": 4,
+      "neuron": 3614,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.25390625,
+      "p99": 0.494140625,
+      "p99.9": 1.5
+    },
+    "L04_N3295_pos": {
+      "layer": 4,
+      "neuron": 3295,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.294921875,
+      "p99": 0.5078125,
+      "p99.9": 2.625
+    },
+    "L04_N3295_neg": {
+      "layer": 4,
+      "neuron": 3295,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.2294921875,
+      "p99": 0.333984375,
+      "p99.9": 0.9140625
+    },
+    "L04_N6043_pos": {
+      "layer": 4,
+      "neuron": 6043,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.1220703125,
+      "p99": 0.1728515625,
+      "p99.9": 0.30078125
+    },
+    "L04_N6043_neg": {
+      "layer": 4,
+      "neuron": 6043,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.1494140625,
+      "p99": 0.2275390625,
+      "p99.9": 0.40234375
+    },
+    "L04_N5325_pos": {
+      "layer": 4,
+      "neuron": 5325,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.22265625,
+      "p99": 0.34375,
+      "p99.9": 1.6484375
+    },
+    "L04_N5325_neg": {
+      "layer": 4,
+      "neuron": 5325,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.2275390625,
+      "p99": 0.333984375,
+      "p99.9": 0.9296875
+    },
+    "L04_N3437_pos": {
+      "layer": 4,
+      "neuron": 3437,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.21875,
+      "p99": 0.294921875,
+      "p99.9": 0.48046875
+    },
+    "L04_N3437_neg": {
+      "layer": 4,
+      "neuron": 3437,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.1943359375,
+      "p99": 0.287109375,
+      "p99.9": 0.49609375
+    },
+    "L04_N5913_pos": {
+      "layer": 4,
+      "neuron": 5913,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.171875,
+      "p99": 0.251953125,
+      "p99.9": 0.435546875
+    },
+    "L04_N5913_neg": {
+      "layer": 4,
+      "neuron": 5913,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.12255859375,
+      "p99": 0.189453125,
+      "p99.9": 0.431640625
+    },
+    "L04_N1366_pos": {
+      "layer": 4,
+      "neuron": 1366,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.28515625,
+      "p99": 0.3828125,
+      "p99.9": 0.97265625
+    },
+    "L04_N1366_neg": {
+      "layer": 4,
+      "neuron": 1366,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.228515625,
+      "p99": 0.3984375,
+      "p99.9": 2.171875
+    },
+    "L04_N1888_pos": {
+      "layer": 4,
+      "neuron": 1888,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.2294921875,
+      "p99": 0.318359375,
+      "p99.9": 0.515625
+    },
+    "L04_N1888_neg": {
+      "layer": 4,
+      "neuron": 1888,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.208984375,
+      "p99": 0.2890625,
+      "p99.9": 0.76953125
+    },
+    "L11_N4363_pos": {
+      "layer": 11,
+      "neuron": 4363,
+      "sign": 1,
+      "in_pilot": true,
+      "p97": 0.314453125,
+      "p99": 0.4296875,
+      "p99.9": 0.65625
+    },
+    "L11_N4363_neg": {
+      "layer": 11,
+      "neuron": 4363,
+      "sign": -1,
+      "in_pilot": true,
+      "p97": 0.306640625,
+      "p99": 0.408203125,
+      "p99.9": 0.62109375
+    },
+    "L11_N4088_pos": {
+      "layer": 11,
+      "neuron": 4088,
+      "sign": 1,
+      "in_pilot": true,
+      "p97": 0.369140625,
+      "p99": 0.66796875,
+      "p99.9": 1.625
+    },
+    "L11_N4088_neg": {
+      "layer": 11,
+      "neuron": 4088,
+      "sign": -1,
+      "in_pilot": true,
+      "p97": 0.5234375,
+      "p99": 1.15625,
+      "p99.9": 3.53125
+    },
+    "L11_N1576_pos": {
+      "layer": 11,
+      "neuron": 1576,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.37890625,
+      "p99": 0.484375,
+      "p99.9": 0.71484375
+    },
+    "L11_N1576_neg": {
+      "layer": 11,
+      "neuron": 1576,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.25390625,
+      "p99": 0.373046875,
+      "p99.9": 1.90625
+    },
+    "L11_N1066_pos": {
+      "layer": 11,
+      "neuron": 1066,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.388671875,
+      "p99": 0.5703125,
+      "p99.9": 1.921875
+    },
+    "L11_N1066_neg": {
+      "layer": 11,
+      "neuron": 1066,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.333984375,
+      "p99": 0.478515625,
+      "p99.9": 1.375
+    },
+    "L11_N3362_pos": {
+      "layer": 11,
+      "neuron": 3362,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.357421875,
+      "p99": 0.474609375,
+      "p99.9": 1.3046875
+    },
+    "L11_N3362_neg": {
+      "layer": 11,
+      "neuron": 3362,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.29296875,
+      "p99": 0.50390625,
+      "p99.9": 2.28125
+    },
+    "L11_N2071_pos": {
+      "layer": 11,
+      "neuron": 2071,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.419921875,
+      "p99": 0.796875,
+      "p99.9": 1.921875
+    },
+    "L11_N2071_neg": {
+      "layer": 11,
+      "neuron": 2071,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.84375,
+      "p99": 1.34375,
+      "p99.9": 2.625
+    },
+    "L11_N0278_pos": {
+      "layer": 11,
+      "neuron": 278,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.314453125,
+      "p99": 0.419921875,
+      "p99.9": 1.09375
+    },
+    "L11_N0278_neg": {
+      "layer": 11,
+      "neuron": 278,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.31640625,
+      "p99": 0.4296875,
+      "p99.9": 1.15625
+    },
+    "L11_N4195_pos": {
+      "layer": 11,
+      "neuron": 4195,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.392578125,
+      "p99": 0.7109375,
+      "p99.9": 2.0
+    },
+    "L11_N4195_neg": {
+      "layer": 11,
+      "neuron": 4195,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.28515625,
+      "p99": 0.419921875,
+      "p99.9": 1.3203125
+    },
+    "L11_N4693_pos": {
+      "layer": 11,
+      "neuron": 4693,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.3984375,
+      "p99": 0.63671875,
+      "p99.9": 2.015625
+    },
+    "L11_N4693_neg": {
+      "layer": 11,
+      "neuron": 4693,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.35546875,
+      "p99": 0.6015625,
+      "p99.9": 1.5625
+    },
+    "L11_N1666_pos": {
+      "layer": 11,
+      "neuron": 1666,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.421875,
+      "p99": 0.84765625,
+      "p99.9": 2.25
+    },
+    "L11_N1666_neg": {
+      "layer": 11,
+      "neuron": 1666,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.349609375,
+      "p99": 0.67578125,
+      "p99.9": 1.6015625
+    },
+    "L11_N0428_pos": {
+      "layer": 11,
+      "neuron": 428,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 1.171875,
+      "p99": 1.609375,
+      "p99.9": 2.625
+    },
+    "L11_N0428_neg": {
+      "layer": 11,
+      "neuron": 428,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 1.3125,
+      "p99": 2.046875,
+      "p99.9": 3.59375
+    },
+    "L11_N0664_pos": {
+      "layer": 11,
+      "neuron": 664,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.53515625,
+      "p99": 1.0703125,
+      "p99.9": 2.671875
+    },
+    "L11_N0664_neg": {
+      "layer": 11,
+      "neuron": 664,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.515625,
+      "p99": 0.8203125,
+      "p99.9": 1.8515625
+    },
+    "L11_N1224_pos": {
+      "layer": 11,
+      "neuron": 1224,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 1.078125,
+      "p99": 1.921875,
+      "p99.9": 3.9375
+    },
+    "L11_N1224_neg": {
+      "layer": 11,
+      "neuron": 1224,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.73828125,
+      "p99": 1.296875,
+      "p99.9": 2.6875
+    },
+    "L18_N0809_pos": {
+      "layer": 18,
+      "neuron": 809,
+      "sign": 1,
+      "in_pilot": true,
+      "p97": 3.203125,
+      "p99": 4.59375,
+      "p99.9": 7.9375
+    },
+    "L18_N0809_neg": {
+      "layer": 18,
+      "neuron": 809,
+      "sign": -1,
+      "in_pilot": true,
+      "p97": 2.734375,
+      "p99": 4.34375,
+      "p99.9": 8.6875
+    },
+    "L18_N3627_pos": {
+      "layer": 18,
+      "neuron": 3627,
+      "sign": 1,
+      "in_pilot": true,
+      "p97": 1.0234375,
+      "p99": 2.140625,
+      "p99.9": 5.34375
+    },
+    "L18_N3627_neg": {
+      "layer": 18,
+      "neuron": 3627,
+      "sign": -1,
+      "in_pilot": true,
+      "p97": 1.8046875,
+      "p99": 4.0625,
+      "p99.9": 12.125
+    },
+    "L18_N2049_pos": {
+      "layer": 18,
+      "neuron": 2049,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 2.375,
+      "p99": 3.953125,
+      "p99.9": 7.4375
+    },
+    "L18_N2049_neg": {
+      "layer": 18,
+      "neuron": 2049,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 1.4921875,
+      "p99": 3.890625,
+      "p99.9": 11.6875
+    },
+    "L18_N0783_pos": {
+      "layer": 18,
+      "neuron": 783,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 1.6015625,
+      "p99": 3.734375,
+      "p99.9": 10.5625
+    },
+    "L18_N0783_neg": {
+      "layer": 18,
+      "neuron": 783,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 1.7578125,
+      "p99": 3.0,
+      "p99.9": 5.96875
+    },
+    "L18_N2188_pos": {
+      "layer": 18,
+      "neuron": 2188,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.953125,
+      "p99": 1.3203125,
+      "p99.9": 12.75
+    },
+    "L18_N2188_neg": {
+      "layer": 18,
+      "neuron": 2188,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.609375,
+      "p99": 2.015625,
+      "p99.9": 8.125
+    },
+    "L18_N2211_pos": {
+      "layer": 18,
+      "neuron": 2211,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.79296875,
+      "p99": 1.9609375,
+      "p99.9": 6.03125
+    },
+    "L18_N2211_neg": {
+      "layer": 18,
+      "neuron": 2211,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 1.2265625,
+      "p99": 3.078125,
+      "p99.9": 9.1875
+    },
+    "L18_N0224_pos": {
+      "layer": 18,
+      "neuron": 224,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 2.46875,
+      "p99": 4.0625,
+      "p99.9": 8.3125
+    },
+    "L18_N0224_neg": {
+      "layer": 18,
+      "neuron": 224,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 2.484375,
+      "p99": 4.0625,
+      "p99.9": 7.90625
+    },
+    "L18_N4045_pos": {
+      "layer": 18,
+      "neuron": 4045,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 1.0546875,
+      "p99": 1.3515625,
+      "p99.9": 3.421875
+    },
+    "L18_N4045_neg": {
+      "layer": 18,
+      "neuron": 4045,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.5703125,
+      "p99": 1.1484375,
+      "p99.9": 10.25
+    },
+    "L18_N1327_pos": {
+      "layer": 18,
+      "neuron": 1327,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 3.84375,
+      "p99": 6.1875,
+      "p99.9": 11.625
+    },
+    "L18_N1327_neg": {
+      "layer": 18,
+      "neuron": 1327,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 2.65625,
+      "p99": 3.96875,
+      "p99.9": 6.8125
+    },
+    "L18_N4838_pos": {
+      "layer": 18,
+      "neuron": 4838,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 1.5546875,
+      "p99": 2.84375,
+      "p99.9": 6.25
+    },
+    "L18_N4838_neg": {
+      "layer": 18,
+      "neuron": 4838,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 1.5,
+      "p99": 2.828125,
+      "p99.9": 6.375
+    },
+    "L18_N3064_pos": {
+      "layer": 18,
+      "neuron": 3064,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.7109375,
+      "p99": 1.859375,
+      "p99.9": 6.09375
+    },
+    "L18_N3064_neg": {
+      "layer": 18,
+      "neuron": 3064,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.9296875,
+      "p99": 1.15625,
+      "p99.9": 3.71875
+    },
+    "L18_N0164_pos": {
+      "layer": 18,
+      "neuron": 164,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 1.375,
+      "p99": 3.3125,
+      "p99.9": 10.4375
+    },
+    "L18_N0164_neg": {
+      "layer": 18,
+      "neuron": 164,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.8359375,
+      "p99": 1.8359375,
+      "p99.9": 5.90625
+    },
+    "L24_N2945_pos": {
+      "layer": 24,
+      "neuron": 2945,
+      "sign": 1,
+      "in_pilot": true,
+      "p97": 0.6015625,
+      "p99": 1.1640625,
+      "p99.9": 9.0
+    },
+    "L24_N2945_neg": {
+      "layer": 24,
+      "neuron": 2945,
+      "sign": -1,
+      "in_pilot": true,
+      "p97": 0.7421875,
+      "p99": 1.3671875,
+      "p99.9": 12.125
+    },
+    "L24_N3647_pos": {
+      "layer": 24,
+      "neuron": 3647,
+      "sign": 1,
+      "in_pilot": true,
+      "p97": 9.375,
+      "p99": 15.875,
+      "p99.9": 29.875
+    },
+    "L24_N3647_neg": {
+      "layer": 24,
+      "neuron": 3647,
+      "sign": -1,
+      "in_pilot": true,
+      "p97": 13.4375,
+      "p99": 25.125,
+      "p99.9": 58.0
+    },
+    "L24_N4188_pos": {
+      "layer": 24,
+      "neuron": 4188,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 4.03125,
+      "p99": 9.875,
+      "p99.9": 30.0
+    },
+    "L24_N4188_neg": {
+      "layer": 24,
+      "neuron": 4188,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 3.640625,
+      "p99": 8.0,
+      "p99.9": 18.625
+    },
+    "L24_N4212_pos": {
+      "layer": 24,
+      "neuron": 4212,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.85546875,
+      "p99": 1.6640625,
+      "p99.9": 17.0
+    },
+    "L24_N4212_neg": {
+      "layer": 24,
+      "neuron": 4212,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.66015625,
+      "p99": 1.1796875,
+      "p99.9": 12.0625
+    },
+    "L24_N3502_pos": {
+      "layer": 24,
+      "neuron": 3502,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 5.625,
+      "p99": 12.125,
+      "p99.9": 29.75
+    },
+    "L24_N3502_neg": {
+      "layer": 24,
+      "neuron": 3502,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 4.84375,
+      "p99": 11.75,
+      "p99.9": 37.5
+    },
+    "L24_N3193_pos": {
+      "layer": 24,
+      "neuron": 3193,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 1.0625,
+      "p99": 1.7890625,
+      "p99.9": 7.34375
+    },
+    "L24_N3193_neg": {
+      "layer": 24,
+      "neuron": 3193,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.57421875,
+      "p99": 1.71875,
+      "p99.9": 17.875
+    },
+    "L24_N1520_pos": {
+      "layer": 24,
+      "neuron": 1520,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.93359375,
+      "p99": 2.609375,
+      "p99.9": 18.196750000002794
+    },
+    "L24_N1520_neg": {
+      "layer": 24,
+      "neuron": 1520,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 1.2265625,
+      "p99": 7.09375,
+      "p99.9": 45.5
+    },
+    "L24_N3172_pos": {
+      "layer": 24,
+      "neuron": 3172,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 1.6875,
+      "p99": 5.96875,
+      "p99.9": 21.5
+    },
+    "L24_N3172_neg": {
+      "layer": 24,
+      "neuron": 3172,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 1.984375,
+      "p99": 6.6875,
+      "p99.9": 23.946750000002794
+    },
+    "L24_N4175_pos": {
+      "layer": 24,
+      "neuron": 4175,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.62109375,
+      "p99": 1.2578125,
+      "p99.9": 12.6875
+    },
+    "L24_N4175_neg": {
+      "layer": 24,
+      "neuron": 4175,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.48046875,
+      "p99": 1.1640625,
+      "p99.9": 11.875
+    },
+    "L24_N5570_pos": {
+      "layer": 24,
+      "neuron": 5570,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.41015625,
+      "p99": 1.140625,
+      "p99.9": 19.375
+    },
+    "L24_N5570_neg": {
+      "layer": 24,
+      "neuron": 5570,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.61328125,
+      "p99": 1.3046875,
+      "p99.9": 23.5
+    },
+    "L24_N3118_pos": {
+      "layer": 24,
+      "neuron": 3118,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.80859375,
+      "p99": 1.875,
+      "p99.9": 22.625
+    },
+    "L24_N3118_neg": {
+      "layer": 24,
+      "neuron": 3118,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.6953125,
+      "p99": 2.015625,
+      "p99.9": 20.875
+    },
+    "L24_N1157_pos": {
+      "layer": 24,
+      "neuron": 1157,
+      "sign": 1,
+      "in_pilot": false,
+      "p97": 0.7734375,
+      "p99": 2.640625,
+      "p99.9": 20.25
+    },
+    "L24_N1157_neg": {
+      "layer": 24,
+      "neuron": 1157,
+      "sign": -1,
+      "in_pilot": false,
+      "p97": 0.765625,
+      "p99": 1.3203125,
+      "p99.9": 7.84375
+    }
+  },
+  "cohorts": {
+    "heldout_80": {
+      "gpt-6.1-terra@none": {
+        "p97_99": {
+          "n_pairs": 344,
+          "n_poles": 80,
+          "n_neurons": 40,
+          "conditions": {
+            "own": {
+              "mean": 0.594375,
+              "ci_low": 0.5312291666666666,
+              "ci_high": 0.657296875,
+              "n_neurons": 40,
+              "n_poles": 80,
+              "n_pairs": 344,
+              "n_scored": 344,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "wrong": {
+              "mean": 0.4527083333333334,
+              "ci_low": 0.403109375,
+              "ci_high": 0.5018958333333334,
+              "n_neurons": 40,
+              "n_poles": 80,
+              "n_pairs": 344,
+              "n_scored": 344,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "no_label": {
+              "mean": 0.43291666666666667,
+              "ci_low": 0.35748958333333336,
+              "ci_high": 0.5033697916666666,
+              "n_neurons": 40,
+              "n_poles": 80,
+              "n_pairs": 344,
+              "n_scored": 344,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "token_only": {
+              "mean": 0.5891666666666666,
+              "ci_low": 0.5325,
+              "ci_high": 0.6450052083333332,
+              "n_neurons": 40,
+              "n_poles": 80,
+              "n_pairs": 344,
+              "n_scored": 344,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "examples_as_label": {
+              "mean": 0.6429166666666667,
+              "ci_low": 0.5856197916666668,
+              "ci_high": 0.6985729166666665,
+              "n_neurons": 40,
+              "n_poles": 80,
+              "n_pairs": 344,
+              "n_scored": 344,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            }
+          },
+          "paired_own_minus_token_only": {
+            "mean": 0.005208333333333338,
+            "ci_low": -0.06605208333333334,
+            "ci_high": 0.07752083333333332,
+            "n_neurons": 40,
+            "n_poles": 80,
+            "n_pairs": 344
+          },
+          "paired_examples_minus_own": {
+            "mean": 0.048541666666666664,
+            "ci_low": -0.031104166666666665,
+            "ci_high": 0.12272395833333333,
+            "n_neurons": 40,
+            "n_poles": 80,
+            "n_pairs": 344
+          }
+        },
+        "p99_99.9": {
+          "n_pairs": 136,
+          "n_poles": 73,
+          "n_neurons": 40,
+          "conditions": {
+            "own": {
+              "mean": 0.6787671232876713,
+              "ci_low": 0.5785071637426901,
+              "ci_high": 0.7700067567567568,
+              "n_neurons": 40,
+              "n_poles": 73,
+              "n_pairs": 136,
+              "n_scored": 136,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "wrong": {
+              "mean": 0.4621004566210046,
+              "ci_low": 0.3759174491392801,
+              "ci_high": 0.5527893518518517,
+              "n_neurons": 40,
+              "n_poles": 73,
+              "n_pairs": 136,
+              "n_scored": 136,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "no_label": {
+              "mean": 0.5168949771689498,
+              "ci_low": 0.41641428571428574,
+              "ci_high": 0.6135990447007931,
+              "n_neurons": 40,
+              "n_poles": 73,
+              "n_pairs": 136,
+              "n_scored": 136,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "token_only": {
+              "mean": 0.6246575342465753,
+              "ci_low": 0.5296605783866059,
+              "ci_high": 0.7292963250517598,
+              "n_neurons": 40,
+              "n_poles": 73,
+              "n_pairs": 136,
+              "n_scored": 136,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "examples_as_label": {
+              "mean": 0.6931506849315069,
+              "ci_low": 0.6055411255411255,
+              "ci_high": 0.7771251752941892,
+              "n_neurons": 40,
+              "n_poles": 73,
+              "n_pairs": 136,
+              "n_scored": 136,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            }
+          },
+          "paired_own_minus_token_only": {
+            "mean": 0.05410958904109589,
+            "ci_low": -0.04955502377377378,
+            "ci_high": 0.16497835497835495,
+            "n_neurons": 40,
+            "n_poles": 73,
+            "n_pairs": 136
+          },
+          "paired_examples_minus_own": {
+            "mean": 0.014383561643835615,
+            "ci_low": -0.07391147660818714,
+            "ci_high": 0.10541079812206572,
+            "n_neurons": 40,
+            "n_poles": 73,
+            "n_pairs": 136
+          }
+        }
+      },
+      "gpt-6-luna@none": {
+        "p97_99": {
+          "n_pairs": 344,
+          "n_poles": 80,
+          "n_neurons": 40,
+          "conditions": {
+            "own": {
+              "mean": 0.62375,
+              "ci_low": 0.57103125,
+              "ci_high": 0.6791979166666665,
+              "n_neurons": 40,
+              "n_poles": 80,
+              "n_pairs": 344,
+              "n_scored": 344,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "wrong": {
+              "mean": 0.438125,
+              "ci_low": 0.38915625,
+              "ci_high": 0.48771875,
+              "n_neurons": 40,
+              "n_poles": 80,
+              "n_pairs": 344,
+              "n_scored": 344,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "no_label": {
+              "mean": 0.4222916666666666,
+              "ci_low": 0.36332812499999995,
+              "ci_high": 0.48687500000000006,
+              "n_neurons": 40,
+              "n_poles": 80,
+              "n_pairs": 344,
+              "n_scored": 344,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "token_only": {
+              "mean": 0.54125,
+              "ci_low": 0.47519791666666666,
+              "ci_high": 0.6052083333333333,
+              "n_neurons": 40,
+              "n_poles": 80,
+              "n_pairs": 344,
+              "n_scored": 344,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            }
+          },
+          "paired_own_minus_token_only": {
+            "mean": 0.08249999999999999,
+            "ci_low": 0.015572916666666664,
+            "ci_high": 0.15525520833333328,
+            "n_neurons": 40,
+            "n_poles": 80,
+            "n_pairs": 344
+          }
+        },
+        "p99_99.9": {
+          "n_pairs": 136,
+          "n_poles": 73,
+          "n_neurons": 40,
+          "conditions": {
+            "own": {
+              "mean": 0.7426940639269406,
+              "ci_low": 0.652031202435312,
+              "ci_high": 0.8263465521442495,
+              "n_neurons": 40,
+              "n_poles": 73,
+              "n_pairs": 136,
+              "n_scored": 136,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "wrong": {
+              "mean": 0.4842465753424658,
+              "ci_low": 0.3918566729323308,
+              "ci_high": 0.566019588667615,
+              "n_neurons": 40,
+              "n_poles": 73,
+              "n_pairs": 136,
+              "n_scored": 136,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "no_label": {
+              "mean": 0.5255707762557078,
+              "ci_low": 0.4274798611111111,
+              "ci_high": 0.62554186680899,
+              "n_neurons": 40,
+              "n_poles": 73,
+              "n_pairs": 136,
+              "n_scored": 136,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "token_only": {
+              "mean": 0.6794520547945204,
+              "ci_low": 0.5844146671826627,
+              "ci_high": 0.7754652777777777,
+              "n_neurons": 40,
+              "n_poles": 73,
+              "n_pairs": 136,
+              "n_scored": 136,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            }
+          },
+          "paired_own_minus_token_only": {
+            "mean": 0.06324200913242009,
+            "ci_low": -0.04413547495015756,
+            "ci_high": 0.16790040849673202,
+            "n_neurons": 40,
+            "n_poles": 73,
+            "n_pairs": 136
+          }
+        }
+      }
+    },
+    "pilot_20": {
+      "gpt-6.1-terra@none": {
+        "p97_99": {
+          "n_pairs": 87,
+          "n_poles": 20,
+          "n_neurons": 10,
+          "conditions": {
+            "own": {
+              "mean": 0.7133333333333334,
+              "ci_low": 0.5866666666666667,
+              "ci_high": 0.8233541666666668,
+              "n_neurons": 10,
+              "n_poles": 20,
+              "n_pairs": 87,
+              "n_scored": 87,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "wrong": {
+              "mean": 0.36666666666666675,
+              "ci_low": 0.24660416666666668,
+              "ci_high": 0.47508333333333325,
+              "n_neurons": 10,
+              "n_poles": 20,
+              "n_pairs": 87,
+              "n_scored": 87,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "no_label": {
+              "mean": 0.48999999999999994,
+              "ci_low": 0.32329166666666664,
+              "ci_high": 0.6567083333333333,
+              "n_neurons": 10,
+              "n_poles": 20,
+              "n_pairs": 87,
+              "n_scored": 87,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "token_only": {
+              "mean": 0.67,
+              "ci_low": 0.5449791666666667,
+              "ci_high": 0.7858541666666667,
+              "n_neurons": 10,
+              "n_poles": 20,
+              "n_pairs": 87,
+              "n_scored": 87,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "examples_as_label": {
+              "mean": 0.7341666666666667,
+              "ci_low": 0.6291458333333333,
+              "ci_high": 0.8316666666666667,
+              "n_neurons": 10,
+              "n_poles": 20,
+              "n_pairs": 87,
+              "n_scored": 87,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            }
+          },
+          "paired_own_minus_token_only": {
+            "mean": 0.043333333333333335,
+            "ci_low": -0.083375,
+            "ci_high": 0.16999999999999998,
+            "n_neurons": 10,
+            "n_poles": 20,
+            "n_pairs": 87
+          },
+          "paired_examples_minus_own": {
+            "mean": 0.020833333333333336,
+            "ci_low": -0.09499999999999999,
+            "ci_high": 0.133375,
+            "n_neurons": 10,
+            "n_poles": 20,
+            "n_pairs": 87
+          }
+        },
+        "p99_99.9": {
+          "n_pairs": 33,
+          "n_poles": 17,
+          "n_neurons": 10,
+          "conditions": {
+            "own": {
+              "mean": 0.9068627450980392,
+              "ci_low": 0.75,
+              "ci_high": 1.0,
+              "n_neurons": 10,
+              "n_poles": 17,
+              "n_pairs": 33,
+              "n_scored": 33,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "wrong": {
+              "mean": 0.4509803921568627,
+              "ci_low": 0.23333333333333334,
+              "ci_high": 0.6764705882352942,
+              "n_neurons": 10,
+              "n_poles": 17,
+              "n_pairs": 33,
+              "n_scored": 33,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "no_label": {
+              "mean": 0.5,
+              "ci_low": 0.27777777777777773,
+              "ci_high": 0.7188368055555555,
+              "n_neurons": 10,
+              "n_poles": 17,
+              "n_pairs": 33,
+              "n_scored": 33,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "token_only": {
+              "mean": 0.7598039215686274,
+              "ci_low": 0.5444444444444444,
+              "ci_high": 0.9166666666666666,
+              "n_neurons": 10,
+              "n_poles": 17,
+              "n_pairs": 33,
+              "n_scored": 33,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "examples_as_label": {
+              "mean": 0.8088235294117647,
+              "ci_low": 0.6222222222222222,
+              "ci_high": 0.9490740740740742,
+              "n_neurons": 10,
+              "n_poles": 17,
+              "n_pairs": 33,
+              "n_scored": 33,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            }
+          },
+          "paired_own_minus_token_only": {
+            "mean": 0.14705882352941177,
+            "ci_low": 0.029370915032679742,
+            "ci_high": 0.29490740740740734,
+            "n_neurons": 10,
+            "n_poles": 17,
+            "n_pairs": 33
+          },
+          "paired_examples_minus_own": {
+            "mean": -0.0980392156862745,
+            "ci_low": -0.2222222222222222,
+            "ci_high": -0.01752192982456142,
+            "n_neurons": 10,
+            "n_poles": 17,
+            "n_pairs": 33
+          }
+        }
+      },
+      "gpt-6-luna@none": {
+        "p97_99": {
+          "n_pairs": 87,
+          "n_poles": 20,
+          "n_neurons": 10,
+          "conditions": {
+            "own": {
+              "mean": 0.6208333333333333,
+              "ci_low": 0.4958333333333334,
+              "ci_high": 0.7316875,
+              "n_neurons": 10,
+              "n_poles": 20,
+              "n_pairs": 87,
+              "n_scored": 87,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "wrong": {
+              "mean": 0.39666666666666667,
+              "ci_low": 0.29083333333333333,
+              "ci_high": 0.49920833333333314,
+              "n_neurons": 10,
+              "n_poles": 20,
+              "n_pairs": 87,
+              "n_scored": 87,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "no_label": {
+              "mean": 0.4883333333333334,
+              "ci_low": 0.366625,
+              "ci_high": 0.6066666666666667,
+              "n_neurons": 10,
+              "n_poles": 20,
+              "n_pairs": 87,
+              "n_scored": 87,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "token_only": {
+              "mean": 0.6725,
+              "ci_low": 0.5791458333333335,
+              "ci_high": 0.7567291666666667,
+              "n_neurons": 10,
+              "n_poles": 20,
+              "n_pairs": 87,
+              "n_scored": 87,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            }
+          },
+          "paired_own_minus_token_only": {
+            "mean": -0.05166666666666666,
+            "ci_low": -0.18166666666666664,
+            "ci_high": 0.05841666666666659,
+            "n_neurons": 10,
+            "n_poles": 20,
+            "n_pairs": 87
+          }
+        },
+        "p99_99.9": {
+          "n_pairs": 33,
+          "n_poles": 17,
+          "n_neurons": 10,
+          "conditions": {
+            "own": {
+              "mean": 0.7205882352941176,
+              "ci_low": 0.5416666666666666,
+              "ci_high": 0.8771929824561402,
+              "n_neurons": 10,
+              "n_poles": 17,
+              "n_pairs": 33,
+              "n_scored": 33,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "wrong": {
+              "mean": 0.6519607843137254,
+              "ci_low": 0.5508782679738562,
+              "ci_high": 0.7871527777777777,
+              "n_neurons": 10,
+              "n_poles": 17,
+              "n_pairs": 33,
+              "n_scored": 33,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "no_label": {
+              "mean": 0.5833333333333333,
+              "ci_low": 0.3815789473684211,
+              "ci_high": 0.7745915032679737,
+              "n_neurons": 10,
+              "n_poles": 17,
+              "n_pairs": 33,
+              "n_scored": 33,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "token_only": {
+              "mean": 0.8039215686274509,
+              "ci_low": 0.6777450980392156,
+              "ci_high": 0.9166666666666667,
+              "n_neurons": 10,
+              "n_poles": 17,
+              "n_pairs": 33,
+              "n_scored": 33,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            }
+          },
+          "paired_own_minus_token_only": {
+            "mean": -0.08333333333333333,
+            "ci_low": -0.27604166666666663,
+            "ci_high": 0.09323937908496722,
+            "n_neurons": 10,
+            "n_poles": 17,
+            "n_pairs": 33
+          }
+        }
+      }
+    },
+    "all_100": {
+      "gpt-6.1-terra@none": {
+        "p97_99": {
+          "n_pairs": 431,
+          "n_poles": 100,
+          "n_neurons": 50,
+          "conditions": {
+            "own": {
+              "mean": 0.6181666666666666,
+              "ci_low": 0.5571666666666667,
+              "ci_high": 0.6706791666666667,
+              "n_neurons": 50,
+              "n_poles": 100,
+              "n_pairs": 431,
+              "n_scored": 431,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "wrong": {
+              "mean": 0.4355,
+              "ci_low": 0.3898333333333334,
+              "ci_high": 0.48401249999999996,
+              "n_neurons": 50,
+              "n_poles": 100,
+              "n_pairs": 431,
+              "n_scored": 431,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "no_label": {
+              "mean": 0.4443333333333333,
+              "ci_low": 0.37747916666666664,
+              "ci_high": 0.5116666666666666,
+              "n_neurons": 50,
+              "n_poles": 100,
+              "n_pairs": 431,
+              "n_scored": 431,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "token_only": {
+              "mean": 0.6053333333333333,
+              "ci_low": 0.5513208333333334,
+              "ci_high": 0.6568375000000001,
+              "n_neurons": 50,
+              "n_poles": 100,
+              "n_pairs": 431,
+              "n_scored": 431,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "examples_as_label": {
+              "mean": 0.6611666666666668,
+              "ci_low": 0.6019874999999999,
+              "ci_high": 0.7086666666666666,
+              "n_neurons": 50,
+              "n_poles": 100,
+              "n_pairs": 431,
+              "n_scored": 431,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            }
+          },
+          "paired_own_minus_token_only": {
+            "mean": 0.012833333333333339,
+            "ci_low": -0.04650416666666666,
+            "ci_high": 0.0728375,
+            "n_neurons": 50,
+            "n_poles": 100,
+            "n_pairs": 431
+          },
+          "paired_examples_minus_own": {
+            "mean": 0.043,
+            "ci_low": -0.021845833333333325,
+            "ci_high": 0.10600416666666666,
+            "n_neurons": 50,
+            "n_poles": 100,
+            "n_pairs": 431
+          }
+        },
+        "p99_99.9": {
+          "n_pairs": 169,
+          "n_poles": 90,
+          "n_neurons": 50,
+          "conditions": {
+            "own": {
+              "mean": 0.7218518518518517,
+              "ci_low": 0.6379460558821024,
+              "ci_high": 0.7989402173913043,
+              "n_neurons": 50,
+              "n_poles": 90,
+              "n_pairs": 169,
+              "n_scored": 169,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "wrong": {
+              "mean": 0.45999999999999996,
+              "ci_low": 0.3735553772070626,
+              "ci_high": 0.5397215727534876,
+              "n_neurons": 50,
+              "n_poles": 90,
+              "n_pairs": 169,
+              "n_scored": 169,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "no_label": {
+              "mean": 0.5137037037037037,
+              "ci_low": 0.42406619385342786,
+              "ci_high": 0.6045102276001152,
+              "n_neurons": 50,
+              "n_poles": 90,
+              "n_pairs": 169,
+              "n_scored": 169,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "token_only": {
+              "mean": 0.6501851851851852,
+              "ci_low": 0.5554189028026237,
+              "ci_high": 0.7293614064027371,
+              "n_neurons": 50,
+              "n_poles": 90,
+              "n_pairs": 169,
+              "n_scored": 169,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "examples_as_label": {
+              "mean": 0.715,
+              "ci_low": 0.6314059934318554,
+              "ci_high": 0.7905551042133573,
+              "n_neurons": 50,
+              "n_poles": 90,
+              "n_pairs": 169,
+              "n_scored": 169,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            }
+          },
+          "paired_own_minus_token_only": {
+            "mean": 0.07166666666666664,
+            "ci_low": -0.017455252155735564,
+            "ci_high": 0.16067068884723518,
+            "n_neurons": 50,
+            "n_poles": 90,
+            "n_pairs": 169
+          },
+          "paired_examples_minus_own": {
+            "mean": -0.006851851851851847,
+            "ci_low": -0.08491650853889941,
+            "ci_high": 0.07132872503840247,
+            "n_neurons": 50,
+            "n_poles": 90,
+            "n_pairs": 169
+          }
+        }
+      },
+      "gpt-6-luna@none": {
+        "p97_99": {
+          "n_pairs": 431,
+          "n_poles": 100,
+          "n_neurons": 50,
+          "conditions": {
+            "own": {
+              "mean": 0.6231666666666666,
+              "ci_low": 0.5726499999999999,
+              "ci_high": 0.6726708333333334,
+              "n_neurons": 50,
+              "n_poles": 100,
+              "n_pairs": 431,
+              "n_scored": 431,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "wrong": {
+              "mean": 0.42983333333333335,
+              "ci_low": 0.3896625,
+              "ci_high": 0.47401249999999995,
+              "n_neurons": 50,
+              "n_poles": 100,
+              "n_pairs": 431,
+              "n_scored": 431,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "no_label": {
+              "mean": 0.4355,
+              "ci_low": 0.3771541666666666,
+              "ci_high": 0.49401249999999997,
+              "n_neurons": 50,
+              "n_poles": 100,
+              "n_pairs": 431,
+              "n_scored": 431,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "token_only": {
+              "mean": 0.5675,
+              "ci_low": 0.5091666666666668,
+              "ci_high": 0.6223375,
+              "n_neurons": 50,
+              "n_poles": 100,
+              "n_pairs": 431,
+              "n_scored": 431,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            }
+          },
+          "paired_own_minus_token_only": {
+            "mean": 0.05566666666666666,
+            "ci_low": -0.007358333333333333,
+            "ci_high": 0.12285416666666665,
+            "n_neurons": 50,
+            "n_poles": 100,
+            "n_pairs": 431
+          }
+        },
+        "p99_99.9": {
+          "n_pairs": 169,
+          "n_poles": 90,
+          "n_neurons": 50,
+          "conditions": {
+            "own": {
+              "mean": 0.7385185185185186,
+              "ci_low": 0.6587931034482759,
+              "ci_high": 0.8126228858350952,
+              "n_neurons": 50,
+              "n_poles": 90,
+              "n_pairs": 169,
+              "n_scored": 169,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "wrong": {
+              "mean": 0.5159259259259259,
+              "ci_low": 0.44019978423709494,
+              "ci_high": 0.587099586288416,
+              "n_neurons": 50,
+              "n_poles": 90,
+              "n_pairs": 169,
+              "n_scored": 169,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "no_label": {
+              "mean": 0.5364814814814816,
+              "ci_low": 0.44569241652518393,
+              "ci_high": 0.6234975441225441,
+              "n_neurons": 50,
+              "n_poles": 90,
+              "n_pairs": 169,
+              "n_scored": 169,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            },
+            "token_only": {
+              "mean": 0.7029629629629629,
+              "ci_low": 0.6206393417874396,
+              "ci_high": 0.773957020145841,
+              "n_neurons": 50,
+              "n_poles": 90,
+              "n_pairs": 169,
+              "n_scored": 169,
+              "n_unparseable": 0,
+              "n_logprob_tie": 0
+            }
+          },
+          "paired_own_minus_token_only": {
+            "mean": 0.035555555555555556,
+            "ci_low": -0.06284770114942528,
+            "ci_high": 0.12842213680268086,
+            "n_neurons": 50,
+            "n_poles": 90,
+            "n_pairs": 169
+          }
+        }
+      }
+    }
+  }
+}

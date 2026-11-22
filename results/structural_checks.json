@@ -1,0 +1,252 @@
+{
+  "total_pairs": 3308,
+  "expected_window_tokens": 69,
+  "expected_target_offset": 60,
+  "window_length_exact_rate": 1.0,
+  "target_offset_exact_rate": 1.0,
+  "truncation_rate_pos": 0.0,
+  "truncation_rate_dist": 0.0,
+  "bos_pos0_leak_count": 0,
+  "same_doc_leak_count": 0,
+  "weak_pos_total": 1354,
+  "weak_pos_other_token_ge_p90_count": 0,
+  "other_token_ge_p90_rate": 0.0,
+  "dist_window_ge_p90_count": 0,
+  "dist_window_ge_p90_rate": 0.0,
+  "total_cells": 580,
+  "imbalanced_cells_count": 0,
+  "exact_50_50_cell_balance_rate": 1.0,
+  "nearest_wgate_tier0_non_tier0_count": 0,
+  "marker_position_rule_accuracy": 0.5,
+  "token_length_rule_accuracy": 0.5,
+  "char_length_rule_accuracy": 0.5208585247883918,
+  "char_length_rule_by_cell": {
+    "dead_zone:p75_90": 0.5675,
+    "dead_zone:p90_97": 0.515,
+    "dead_zone:p97_99.9": 0.52,
+    "dead_zone:p99.9_plus": 0.4775,
+    "goodfire_lt_p90:p99.9_plus": 0.505,
+    "nearest_wgate_tier0:p90_97": 0.5746753246753247,
+    "nearest_wgate_tier0:p99.9_plus": 0.5422077922077922
+  },
+  "extra_marker_balance": {
+    "pos_mean_extra_markers": 0.0006045949214026602,
+    "dist_mean_extra_markers": 0.0009068923821039903,
+    "pos_nonzero_rate": 0.0006045949214026602,
+    "dist_nonzero_rate": 0.0006045949214026602,
+    "extra_marker_rule_accuracy": 0.5
+  },
+  "pos_slot_balance": {
+    "slot_A_count": 1654,
+    "slot_B_count": 1654,
+    "slot_A_rate": 0.5
+  },
+  "surviving_pair_counts": {
+    "dead_zone:p75_90": {
+      "surviving_pairs": 600,
+      "target_max_pairs": 600,
+      "surviving_poles": 100,
+      "total_poles": 100,
+      "surviving_neurons": 50,
+      "poles_with_full_6": 100,
+      "poles_with_4": 0,
+      "poles_with_2": 0,
+      "poles_with_0": 0
+    },
+    "dead_zone:p90_97": {
+      "surviving_pairs": 600,
+      "target_max_pairs": 600,
+      "surviving_poles": 100,
+      "total_poles": 100,
+      "surviving_neurons": 50,
+      "poles_with_full_6": 100,
+      "poles_with_4": 0,
+      "poles_with_2": 0,
+      "poles_with_0": 0
+    },
+    "dead_zone:p97_99.9": {
+      "surviving_pairs": 600,
+      "target_max_pairs": 600,
+      "surviving_poles": 100,
+      "total_poles": 100,
+      "surviving_neurons": 50,
+      "poles_with_full_6": 100,
+      "poles_with_4": 0,
+      "poles_with_2": 0,
+      "poles_with_0": 0
+    },
+    "dead_zone:p99.9_plus": {
+      "surviving_pairs": 600,
+      "target_max_pairs": 600,
+      "surviving_poles": 100,
+      "total_poles": 100,
+      "surviving_neurons": 50,
+      "poles_with_full_6": 100,
+      "poles_with_4": 0,
+      "poles_with_2": 0,
+      "poles_with_0": 0
+    },
+    "goodfire_lt_p90:p99.9_plus": {
+      "surviving_pairs": 600,
+      "target_max_pairs": 600,
+      "surviving_poles": 100,
+      "total_poles": 100,
+      "surviving_neurons": 50,
+      "poles_with_full_6": 100,
+      "poles_with_4": 0,
+      "poles_with_2": 0,
+      "poles_with_0": 0
+    },
+    "nearest_wgate_tier0:p90_97": {
+      "surviving_pairs": 154,
+      "target_max_pairs": 600,
+      "surviving_poles": 40,
+      "total_poles": 100,
+      "surviving_neurons": 29,
+      "poles_with_full_6": 16,
+      "poles_with_4": 5,
+      "poles_with_2": 19,
+      "poles_with_0": 60
+    },
+    "nearest_wgate_tier0:p99.9_plus": {
+      "surviving_pairs": 154,
+      "target_max_pairs": 600,
+      "surviving_poles": 40,
+      "total_poles": 100,
+      "surviving_neurons": 29,
+      "poles_with_full_6": 16,
+      "poles_with_4": 5,
+      "poles_with_2": 19,
+      "poles_with_0": 60
+    }
+  },
+  "nearest_wgate_tier0_summary": {
+    "surviving_pairs_total": 308,
+    "surviving_pairs_by_band": {
+      "p90_97": 154,
+      "p99.9_plus": 154
+    },
+    "surviving_poles": 40,
+    "surviving_poles_by_band": {
+      "p90_97": 40,
+      "p99.9_plus": 40
+    },
+    "surviving_neurons": 29,
+    "sampled_50_neurons_wgate_cosine_stats": {
+      "n": 50,
+      "min": 0.09852716326713562,
+      "p25": 0.13506757467985153,
+      "median": 0.17360501736402512,
+      "p75": 0.23370255529880524,
+      "p90": 0.3148075819015503,
+      "max": 0.48630785942077637
+    },
+    "surviving_tier0_pairs_wgate_cosine_stats": {
+      "n": 308,
+      "min": 0.09852716326713562,
+      "p25": 0.12328632175922394,
+      "median": 0.15450917184352875,
+      "p75": 0.17099517583847046,
+      "p90": 0.20571133494377136,
+      "max": 0.3312823176383972
+    },
+    "surviving_tier0_neurons_wgate_cosine_stats": {
+      "n": 29,
+      "min": 0.09852716326713562,
+      "p25": 0.1311546266078949,
+      "median": 0.15809455513954163,
+      "p75": 0.2037220001220703,
+      "p90": 0.22277922332286834,
+      "max": 0.3312823176383972
+    }
+  },
+  "all_hard_invariants_passed": true,
+  "rule_baseline_summary": {
+    "dead_zone:p75_90": {
+      "rarity": 0.495,
+      "top_10_token": 0.51,
+      "top_token": 0.5033333333333333,
+      "window_has_ge_p97": 0.5
+    },
+    "dead_zone:p90_97": {
+      "rarity": 0.5675,
+      "top_10_token": 0.505,
+      "top_token": 0.49666666666666665,
+      "window_has_ge_p97": 0.5
+    },
+    "dead_zone:p97_99.9": {
+      "rarity": 0.51,
+      "top_10_token": 0.5183333333333333,
+      "top_token": 0.5125,
+      "window_has_ge_p97": 1.0
+    },
+    "dead_zone:p99.9_plus": {
+      "rarity": 0.5716666666666667,
+      "top_10_token": 0.575,
+      "top_token": 0.5516666666666666,
+      "window_has_ge_p97": 1.0
+    },
+    "goodfire_lt_p90:p99.9_plus": {
+      "rarity": 0.5416666666666666,
+      "top_10_token": 0.5666666666666667,
+      "top_token": 0.55,
+      "window_has_ge_p97": 1.0
+    },
+    "nearest_wgate_tier0:p90_97": {
+      "rarity": 0.512987012987013,
+      "top_10_token": 0.5064935064935064,
+      "top_token": 0.5064935064935064,
+      "window_has_ge_p97": 0.5
+    },
+    "nearest_wgate_tier0:p99.9_plus": {
+      "rarity": 0.5584415584415584,
+      "top_10_token": 0.538961038961039,
+      "top_token": 0.5422077922077922,
+      "window_has_ge_p97": 1.0
+    }
+  },
+  "rule_tie_rate_summary": {
+    "dead_zone:p75_90": {
+      "rarity": 0.01,
+      "top_10_token": 0.95,
+      "top_token": 0.98,
+      "window_has_ge_p97": 1.0
+    },
+    "dead_zone:p90_97": {
+      "rarity": 0.008333333333333333,
+      "top_10_token": 0.92,
+      "top_token": 0.9633333333333334,
+      "window_has_ge_p97": 1.0
+    },
+    "dead_zone:p97_99.9": {
+      "rarity": 0.016666666666666666,
+      "top_10_token": 0.9033333333333333,
+      "top_token": 0.9383333333333334,
+      "window_has_ge_p97": 0.0
+    },
+    "dead_zone:p99.9_plus": {
+      "rarity": 0.01,
+      "top_10_token": 0.7966666666666666,
+      "top_token": 0.87,
+      "window_has_ge_p97": 0.0
+    },
+    "goodfire_lt_p90:p99.9_plus": {
+      "rarity": 0.01,
+      "top_10_token": 0.8033333333333333,
+      "top_token": 0.8733333333333333,
+      "window_has_ge_p97": 0.0
+    },
+    "nearest_wgate_tier0:p90_97": {
+      "rarity": 0.012987012987012988,
+      "top_10_token": 0.9090909090909091,
+      "top_token": 0.974025974025974,
+      "window_has_ge_p97": 1.0
+    },
+    "nearest_wgate_tier0:p99.9_plus": {
+      "rarity": 0.012987012987012988,
+      "top_10_token": 0.8311688311688312,
+      "top_token": 0.9025974025974026,
+      "window_has_ge_p97": 0.0
+    }
+  }
+}

@@ -1,0 +1,2273 @@
+{
+  "schema_version": "effect_weighted_1.0",
+  "n_bootstrap": 2000,
+  "n_permutations": 1000,
+  "seed": 42,
+  "qwen3_4b": {
+    "kl_source_file": "results/qwen4b/band_kl_4b_all278.json",
+    "n_kl_neurons": 278,
+    "n_bipolar_in_kl": 146,
+    "n_unipolar_in_kl": 132,
+    "zero_ablation_sanity_kl": 0.0,
+    "kl_4band_additivity_ratio_median": 1.000011168990631,
+    "band_mapping": {
+      "p99.9+": "p99.9_plus detection accuracy (20 pairs/pole, gpt-6.1-terra@none, own label)",
+      "p97_99.9": "Corpus L2-energy-weighted merge of p99_99.9 and p97_99 using energy_l2.bands_5 (equal-weight 50/50 sensitivity also reported)",
+      "p75_97": "p75_97 detection accuracy (6 pairs/pole, gpt-6.1-terra@none, own label)",
+      "lt_p75": "p25_75 detection accuracy (6 pairs/pole); < p25 is untested, and on 1-sided (unipolar) neurons the < p75 KL band includes the excluded opposite-sign activation side"
+    },
+    "missing_raw_band_cells_all278": {
+      "top100": 0,
+      "p99.9_plus": 0,
+      "p99_99.9": 1,
+      "p97_99": 3,
+      "p75_97": 5,
+      "p25_75": 15
+    },
+    "all_kl_neurons": {
+      "n_neurons": 278,
+      "bands": {
+        "p99.9+": {
+          "kl_share": {
+            "n": 278,
+            "mean": 0.2927836266051802,
+            "median": 0.21251567577962222,
+            "std": 0.26201676919534994,
+            "ci_low": 0.26188854837754777,
+            "ci_high": 0.32398140945258386,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_detected_only": {
+            "n": 278,
+            "mean": 0.8393884892086332,
+            "median": 0.8875,
+            "std": 0.1519274009975901,
+            "ci_low": 0.8203214928057555,
+            "ci_high": 0.8571942446043166,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_imputed_0_5": {
+            "n": 278,
+            "mean": 0.8393884892086332,
+            "median": 0.8875,
+            "std": 0.1519274009975901,
+            "ci_low": 0.8223875899280576,
+            "ci_high": 0.8569244604316547,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "n_missing_neurons": 0
+        },
+        "p97_99.9": {
+          "kl_share": {
+            "n": 278,
+            "mean": 0.33379684265311615,
+            "median": 0.3320154801892103,
+            "std": 0.18354614370162653,
+            "ci_low": 0.31206424644332803,
+            "ci_high": 0.3555934852280617,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_detected_only": {
+            "n": 277,
+            "mean": 0.6635934167706001,
+            "median": 0.6458755998641248,
+            "std": 0.18236171727279477,
+            "ci_low": 0.6427928029605706,
+            "ci_high": 0.6860641387397466,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_imputed_0_5": {
+            "n": 278,
+            "mean": 0.6630049512426482,
+            "median": 0.6457613434866594,
+            "std": 0.18229648375118487,
+            "ci_low": 0.6405934175807734,
+            "ci_high": 0.6842352731148991,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "n_missing_neurons": 1,
+          "det_acc_equal_weight_detected_only": {
+            "n": 277,
+            "mean": 0.648977135980746,
+            "median": 0.6333333333333333,
+            "std": 0.168502738808037,
+            "ci_low": 0.6296307160048134,
+            "ci_high": 0.668232551143201,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "mean_energy_weight_on_p99_99.9": 0.6312622198253226
+        },
+        "p75_97": {
+          "kl_share": {
+            "n": 278,
+            "mean": 0.19181876455544491,
+            "median": 0.1662321872099757,
+            "std": 0.14779794537956473,
+            "ci_low": 0.1750341637585008,
+            "ci_high": 0.20969753883405903,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_detected_only": {
+            "n": 273,
+            "mean": 0.5485347985347986,
+            "median": 0.5,
+            "std": 0.1826298057425395,
+            "ci_low": 0.5277777777777777,
+            "ci_high": 0.5695970695970696,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_imputed_0_5": {
+            "n": 278,
+            "mean": 0.5476618705035972,
+            "median": 0.5,
+            "std": 0.1810893430255331,
+            "ci_low": 0.5251798561151079,
+            "ci_high": 0.5689448441247003,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "n_missing_neurons": 5
+        },
+        "lt_p75": {
+          "kl_share": {
+            "n": 278,
+            "mean": 0.1816007661862587,
+            "median": 0.04959169642409399,
+            "std": 0.2133766457715979,
+            "ci_low": 0.1582617744668897,
+            "ci_high": 0.20575149777483437,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_detected_only": {
+            "n": 263,
+            "mean": 0.4993662864385297,
+            "median": 0.5,
+            "std": 0.17655050363815042,
+            "ci_low": 0.4781368821292776,
+            "ci_high": 0.51933618504436,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_imputed_0_5": {
+            "n": 278,
+            "mean": 0.49940047961630707,
+            "median": 0.5,
+            "std": 0.1717037868567506,
+            "ci_low": 0.47901678657074337,
+            "ci_high": 0.519484412470024,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "n_missing_neurons": 15
+        }
+      },
+      "top100_acc": {
+        "n": 278,
+        "mean": 0.8969424460431655,
+        "median": 0.95,
+        "std": 0.12160406663493667,
+        "ci_low": 0.8821043165467626,
+        "ci_high": 0.9114208633093526,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "missing_subbands": {
+        "p99_99.9": 1,
+        "p97_99": 3
+      },
+      "ewl_full_energy_merge": {
+        "n": 278,
+        "mean": 0.3448694713807017,
+        "median": 0.3484766708043597,
+        "std": 0.3056361019503795,
+        "ci_low": 0.30929050317937323,
+        "ci_high": 0.3817249860436009,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_full_equal_merge": {
+        "n": 278,
+        "mean": 0.3358431701886089,
+        "median": 0.3525922499374622,
+        "std": 0.2976290926916738,
+        "ci_low": 0.3006365003846733,
+        "ci_high": 0.37003445868399765,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_full_token_width_merge": {
+        "n": 278,
+        "mean": 0.3274128711304912,
+        "median": 0.3431790908348924,
+        "std": 0.29418298707677815,
+        "ci_low": 0.29402892296156685,
+        "ci_high": 0.36091453745971835,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_ge_p75_renorm_energy_merge": {
+        "n": 278,
+        "mean": 0.4212077785534004,
+        "median": 0.4205961638784108,
+        "std": 0.3147699037515001,
+        "ci_low": 0.3844468160663333,
+        "ci_high": 0.4578172033537316,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_ge_p75_renorm_equal_merge": {
+        "n": 278,
+        "mean": 0.40967724067112155,
+        "median": 0.41716515527439,
+        "std": 0.30405821942334754,
+        "ci_low": 0.37356165490695104,
+        "ci_high": 0.4440113385943168,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_top_band_contribution": {
+        "n": 278,
+        "mean": 0.2168133417197352,
+        "median": 0.13137734609514307,
+        "std": 0.22498718580061716,
+        "ci_low": 0.19161082762058657,
+        "ci_high": 0.24282544802367154,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_below_top_contribution": {
+        "n": 278,
+        "mean": 0.12805612966096647,
+        "median": 0.09977729906985512,
+        "std": 0.21037595943717116,
+        "ci_low": 0.10277855296679467,
+        "ci_high": 0.15253371240270291,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_distribution": {
+        "n_neurons": 278,
+        "median": 0.3484766708043597,
+        "q25": 0.10412855101839459,
+        "q75": 0.5741213110276586,
+        "iqr": [
+          0.10412855101839459,
+          0.5741213110276586
+        ],
+        "n_negative": 42,
+        "negative_share": 0.1510791366906475
+      },
+      "top_p999_lift": {
+        "n": 278,
+        "mean": 0.6787769784172661,
+        "median": 0.7749999999999999,
+        "std": 0.3038548019951803,
+        "ci_low": 0.6433453237410072,
+        "ci_high": 0.7134892086330935,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "top100_lift": {
+        "n": 278,
+        "mean": 0.793884892086331,
+        "median": 0.8999999999999999,
+        "std": 0.24320813326987334,
+        "ci_low": 0.7636690647482015,
+        "ci_high": 0.8223021582733813,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_ratio_to_p999_lift": 0.5080747909053263,
+      "ewl_ratio_to_top100_lift": 0.4344073993830316,
+      "lt_p75_diagnostics": {
+        "opposite_sign_eval_energy_share": {
+          "n": 278,
+          "mean": 0.16644349962856722,
+          "median": 0.0,
+          "std": 0.20705365553594937,
+          "ci_low": 0.1419783399505813,
+          "ci_high": 0.19057376488436895,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        },
+        "corpus_dead_or_opp_energy_share": {
+          "n": 278,
+          "mean": 0.1558661199044779,
+          "median": 0.023280523112551636,
+          "std": 0.18237360484853132,
+          "ci_low": 0.13490048749575012,
+          "ci_high": 0.17782783763302343,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        },
+        "corpus_p25_75_energy_share": {
+          "n": 278,
+          "mean": 0.01192350059284483,
+          "median": 0.007344544935387276,
+          "std": 0.01319940824805942,
+          "ci_low": 0.010477332932816552,
+          "ci_high": 0.013563304677612669,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        }
+      }
+    },
+    "bipolar_only": {
+      "n_neurons": 146,
+      "bands": {
+        "p99.9+": {
+          "kl_share": {
+            "n": 146,
+            "mean": 0.31599056810819326,
+            "median": 0.22633429758611942,
+            "std": 0.2624680954933413,
+            "ci_low": 0.27597086169133955,
+            "ci_high": 0.3577239582630467,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_detected_only": {
+            "n": 146,
+            "mean": 0.8068493150684931,
+            "median": 0.85,
+            "std": 0.14587785833104272,
+            "ci_low": 0.7832191780821919,
+            "ci_high": 0.8299657534246576,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_imputed_0_5": {
+            "n": 146,
+            "mean": 0.8068493150684931,
+            "median": 0.85,
+            "std": 0.14587785833104272,
+            "ci_low": 0.7835616438356164,
+            "ci_high": 0.8289426369863013,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "n_missing_neurons": 0
+        },
+        "p97_99.9": {
+          "kl_share": {
+            "n": 146,
+            "mean": 0.40820553679943866,
+            "median": 0.4096318233142121,
+            "std": 0.17792699940625037,
+            "ci_low": 0.3788573010852432,
+            "ci_high": 0.4367978098158327,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_detected_only": {
+            "n": 146,
+            "mean": 0.6385851089284521,
+            "median": 0.6330195924741375,
+            "std": 0.16421549997871948,
+            "ci_low": 0.6130226585352656,
+            "ci_high": 0.6661121807548367,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_imputed_0_5": {
+            "n": 146,
+            "mean": 0.6385851089284521,
+            "median": 0.6330195924741375,
+            "std": 0.16421549997871948,
+            "ci_low": 0.6109345643905257,
+            "ci_high": 0.6651548645476814,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "n_missing_neurons": 0,
+          "det_acc_equal_weight_detected_only": {
+            "n": 146,
+            "mean": 0.6295662100456622,
+            "median": 0.625,
+            "std": 0.15307224833560795,
+            "ci_low": 0.6053053652968037,
+            "ci_high": 0.6544006849315067,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "mean_energy_weight_on_p99_99.9": 0.6069735051755933
+        },
+        "p75_97": {
+          "kl_share": {
+            "n": 146,
+            "mean": 0.24929702661622488,
+            "median": 0.2436162414376612,
+            "std": 0.16474825470103954,
+            "ci_low": 0.22236408260799456,
+            "ci_high": 0.2759421169505225,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_detected_only": {
+            "n": 146,
+            "mean": 0.5279680365296804,
+            "median": 0.5,
+            "std": 0.15819788436891372,
+            "ci_low": 0.5016980593607305,
+            "ci_high": 0.5536529680365296,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_imputed_0_5": {
+            "n": 146,
+            "mean": 0.5279680365296804,
+            "median": 0.5,
+            "std": 0.15819788436891372,
+            "ci_low": 0.5016980593607305,
+            "ci_high": 0.5519406392694064,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "n_missing_neurons": 0
+        },
+        "lt_p75": {
+          "kl_share": {
+            "n": 146,
+            "mean": 0.026506868476143117,
+            "median": 0.02150820895086032,
+            "std": 0.021922237587176777,
+            "ci_low": 0.023064758974870297,
+            "ci_high": 0.030313456018846274,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_detected_only": {
+            "n": 146,
+            "mean": 0.5171232876712328,
+            "median": 0.5,
+            "std": 0.16168349486393324,
+            "ci_low": 0.49086757990867586,
+            "ci_high": 0.5422374429223744,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_imputed_0_5": {
+            "n": 146,
+            "mean": 0.5171232876712328,
+            "median": 0.5,
+            "std": 0.16168349486393324,
+            "ci_low": 0.4920091324200913,
+            "ci_high": 0.5433789954337899,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "n_missing_neurons": 0
+        }
+      },
+      "top100_acc": {
+        "n": 146,
+        "mean": 0.8712328767123287,
+        "median": 0.9,
+        "std": 0.11891544611807398,
+        "ci_low": 0.852054794520548,
+        "ci_high": 0.8892123287671232,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "missing_subbands": {
+        "p99_99.9": 0,
+        "p97_99": 0
+      },
+      "ewl_full_energy_merge": {
+        "n": 146,
+        "mean": 0.3588825250016279,
+        "median": 0.35293075129592844,
+        "std": 0.28502712256921925,
+        "ci_low": 0.31400578995930967,
+        "ci_high": 0.40681187924825496,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_full_equal_merge": {
+        "n": 146,
+        "mean": 0.3515382552075364,
+        "median": 0.3605173727011741,
+        "std": 0.2772443650924225,
+        "ci_low": 0.3074178576585445,
+        "ci_high": 0.3947496825831509,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_full_token_width_merge": {
+        "n": 146,
+        "mean": 0.3431090032494427,
+        "median": 0.3357920042307856,
+        "std": 0.2723806681253433,
+        "ci_low": 0.3003838722565639,
+        "ci_high": 0.385275032282656,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_ge_p75_renorm_energy_merge": {
+        "n": 146,
+        "mean": 0.3637115106955406,
+        "median": 0.35756062241520586,
+        "std": 0.2871338331762879,
+        "ci_low": 0.32008475094885896,
+        "ci_high": 0.410488332655358,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_ge_p75_renorm_equal_merge": {
+        "n": 146,
+        "mean": 0.3562160166576701,
+        "median": 0.3689029800534902,
+        "std": 0.2791387311873507,
+        "ci_low": 0.3105725418291249,
+        "ci_high": 0.40186125569264036,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_top_band_contribution": {
+        "n": 146,
+        "mean": 0.21375908773843033,
+        "median": 0.13374366982938535,
+        "std": 0.22253708804378342,
+        "ci_low": 0.18122532868063726,
+        "ci_high": 0.2528678851450546,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_below_top_contribution": {
+        "n": 146,
+        "mean": 0.1451234372631976,
+        "median": 0.11277894942502922,
+        "std": 0.20050817112627947,
+        "ci_low": 0.1140280060487813,
+        "ci_high": 0.17667671651519887,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_distribution": {
+        "n_neurons": 146,
+        "median": 0.35293075129592844,
+        "q25": 0.1472674169206892,
+        "q75": 0.5921034900149639,
+        "iqr": [
+          0.1472674169206892,
+          0.5921034900149639
+        ],
+        "n_negative": 18,
+        "negative_share": 0.1232876712328767
+      },
+      "top_p999_lift": {
+        "n": 146,
+        "mean": 0.6136986301369862,
+        "median": 0.7,
+        "std": 0.29175571666208544,
+        "ci_low": 0.5664383561643835,
+        "ci_high": 0.6578852739726027,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "top100_lift": {
+        "n": 146,
+        "mean": 0.7424657534246576,
+        "median": 0.8,
+        "std": 0.23783089223614795,
+        "ci_low": 0.702388698630137,
+        "ci_high": 0.780154109589041,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_ratio_to_p999_lift": 0.584786257257117,
+      "ewl_ratio_to_top100_lift": 0.48336576245606705,
+      "lt_p75_diagnostics": {
+        "opposite_sign_eval_energy_share": {
+          "n": 146,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        },
+        "corpus_dead_or_opp_energy_share": {
+          "n": 146,
+          "mean": 0.008303026727358933,
+          "median": 0.0034602919427624054,
+          "std": 0.01941638838043343,
+          "ci_low": 0.005543806045810636,
+          "ci_high": 0.011900691118426884,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        },
+        "corpus_p25_75_energy_share": {
+          "n": 146,
+          "mean": 0.01745862197810108,
+          "median": 0.012330780295720066,
+          "std": 0.01477800076285134,
+          "ci_low": 0.014937722172547525,
+          "ci_high": 0.019962414457691605,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        }
+      }
+    },
+    "unipolar_only": {
+      "n_neurons": 132,
+      "bands": {
+        "p99.9+": {
+          "kl_share": {
+            "n": 132,
+            "mean": 0.2671153428215446,
+            "median": 0.18558987211161496,
+            "std": 0.2600975261875771,
+            "ci_low": 0.22487612658137968,
+            "ci_high": 0.3139707975777242,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_detected_only": {
+            "n": 132,
+            "mean": 0.8753787878787879,
+            "median": 0.9,
+            "std": 0.15088747793303733,
+            "ci_low": 0.8496212121212121,
+            "ci_high": 0.9003787878787879,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_imputed_0_5": {
+            "n": 132,
+            "mean": 0.8753787878787879,
+            "median": 0.9,
+            "std": 0.15088747793303733,
+            "ci_low": 0.8488636363636364,
+            "ci_high": 0.899251893939394,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "n_missing_neurons": 0
+        },
+        "p97_99.9": {
+          "kl_share": {
+            "n": 132,
+            "mean": 0.25149631730945643,
+            "median": 0.22973285080108977,
+            "std": 0.15231183201211473,
+            "ci_low": 0.2271341842537164,
+            "ci_high": 0.2785350787226847,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_detected_only": {
+            "n": 131,
+            "mean": 0.6914652713122307,
+            "median": 0.7135156072221563,
+            "std": 0.19758828658669778,
+            "ci_low": 0.6581262921764596,
+            "ci_high": 0.7236710033615621,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_imputed_0_5": {
+            "n": 132,
+            "mean": 0.6900147768325926,
+            "median": 0.7046014547645594,
+            "std": 0.1975368988685733,
+            "ci_low": 0.6576381362982593,
+            "ci_high": 0.7236694222702506,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "n_missing_neurons": 1,
+          "det_acc_equal_weight_detected_only": {
+            "n": 131,
+            "mean": 0.6706106870229007,
+            "median": 0.6666666666666667,
+            "std": 0.1823497163814525,
+            "ci_low": 0.640203562340967,
+            "ci_high": 0.7024204834605597,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "mean_energy_weight_on_p99_99.9": 0.6581270102712354
+        },
+        "p75_97": {
+          "kl_share": {
+            "n": 132,
+            "mean": 0.12824432318518822,
+            "median": 0.10939969247718478,
+            "std": 0.09161031867359685,
+            "ci_low": 0.11265229445325221,
+            "ci_high": 0.14400936583561041,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_detected_only": {
+            "n": 127,
+            "mean": 0.5721784776902886,
+            "median": 0.6666666666666666,
+            "std": 0.20529858581858373,
+            "ci_low": 0.5354330708661417,
+            "ci_high": 0.6076115485564303,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_imputed_0_5": {
+            "n": 132,
+            "mean": 0.5694444444444446,
+            "median": 0.5,
+            "std": 0.20181709178234147,
+            "ci_low": 0.5365845959595957,
+            "ci_high": 0.6047979797979799,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "n_missing_neurons": 5
+        },
+        "lt_p75": {
+          "kl_share": {
+            "n": 132,
+            "mean": 0.3531440166838108,
+            "median": 0.35019371989965287,
+            "std": 0.19819290362981531,
+            "ci_low": 0.32064898649813056,
+            "ci_high": 0.3882157686108141,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_detected_only": {
+            "n": 117,
+            "mean": 0.47720797720797725,
+            "median": 0.5,
+            "std": 0.19191760547729178,
+            "ci_low": 0.4415954415954416,
+            "ci_high": 0.50997150997151,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "det_acc_imputed_0_5": {
+            "n": 132,
+            "mean": 0.4797979797979798,
+            "median": 0.5,
+            "std": 0.18074192472878634,
+            "ci_low": 0.44949494949494945,
+            "ci_high": 0.5113636363636364,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "n_missing_neurons": 15
+        }
+      },
+      "top100_acc": {
+        "n": 132,
+        "mean": 0.9253787878787879,
+        "median": 1.0,
+        "std": 0.11859486043103618,
+        "ci_low": 0.9049242424242425,
+        "ci_high": 0.9443181818181818,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "missing_subbands": {
+        "p99_99.9": 1,
+        "p97_99": 3
+      },
+      "ewl_full_energy_merge": {
+        "n": 132,
+        "mean": 0.3293701847999802,
+        "median": 0.34574072306095827,
+        "std": 0.32732168937614986,
+        "ci_low": 0.27436530980410256,
+        "ci_high": 0.38476747887250906,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_full_equal_merge": {
+        "n": 132,
+        "mean": 0.3184834549404012,
+        "median": 0.35031807181544117,
+        "std": 0.3188292548168368,
+        "ci_low": 0.2647699049338634,
+        "ci_high": 0.3724799758634386,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_full_token_width_merge": {
+        "n": 132,
+        "mean": 0.31005199772619624,
+        "median": 0.35156259703737736,
+        "std": 0.31669937540972365,
+        "ci_low": 0.25380101142325673,
+        "ci_high": 0.36324304748599373,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_ge_p75_renorm_energy_merge": {
+        "n": 132,
+        "mean": 0.48480213542648776,
+        "median": 0.5561241799265269,
+        "std": 0.3323987445391159,
+        "ci_low": 0.42598797364202956,
+        "ci_high": 0.5414854064201421,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_ge_p75_renorm_equal_merge": {
+        "n": 132,
+        "mean": 0.46880859450418144,
+        "median": 0.5330991732932404,
+        "std": 0.32021035886778104,
+        "ci_low": 0.41207482463516804,
+        "ci_high": 0.5243215366771123,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_top_band_contribution": {
+        "n": 132,
+        "mean": 0.22019153172936035,
+        "median": 0.1286585052879105,
+        "std": 0.22846751047148087,
+        "ci_low": 0.1835062436424962,
+        "ci_high": 0.26170603875790915,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_below_top_contribution": {
+        "n": 132,
+        "mean": 0.10917865307061987,
+        "median": 0.0937938051767262,
+        "std": 0.2199999778501417,
+        "ci_low": 0.07196313610182033,
+        "ci_high": 0.14876861648176895,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_distribution": {
+        "n_neurons": 132,
+        "median": 0.34574072306095827,
+        "q25": 0.07804895707106708,
+        "q75": 0.5562172874070308,
+        "iqr": [
+          0.07804895707106708,
+          0.5562172874070308
+        ],
+        "n_negative": 24,
+        "negative_share": 0.18181818181818182
+      },
+      "top_p999_lift": {
+        "n": 132,
+        "mean": 0.7507575757575757,
+        "median": 0.8,
+        "std": 0.30177495586607467,
+        "ci_low": 0.7000000000000001,
+        "ci_high": 0.8015151515151514,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "top100_lift": {
+        "n": 132,
+        "mean": 0.8507575757575757,
+        "median": 1.0,
+        "std": 0.23718972086207235,
+        "ci_low": 0.8068181818181818,
+        "ci_high": 0.8886363636363636,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_ratio_to_p999_lift": 0.4387170978163208,
+      "ewl_ratio_to_top100_lift": 0.38714928222259476,
+      "lt_p75_diagnostics": {
+        "opposite_sign_eval_energy_share": {
+          "n": 132,
+          "mean": 0.35054009770258854,
+          "median": 0.37274178569707717,
+          "std": 0.16007963896433547,
+          "ci_low": 0.3234763748660017,
+          "ci_high": 0.37710927226475116,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        },
+        "corpus_dead_or_opp_energy_share": {
+          "n": 132,
+          "mean": 0.3190798441761398,
+          "median": 0.3274568790312866,
+          "std": 0.1371172824120987,
+          "ci_low": 0.29562176672606255,
+          "ci_high": 0.3419550854527911,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        },
+        "corpus_p25_75_energy_share": {
+          "n": 132,
+          "mean": 0.005801320878849284,
+          "median": 0.002886028336577341,
+          "std": 0.007399770524203695,
+          "ci_low": 0.004611091368350329,
+          "ci_high": 0.007084651036940194,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        }
+      }
+    },
+    "n60_subset_comparison": {
+      "n_neurons": 60,
+      "sim_ge_0_50_in_n60": 5,
+      "sim_ge_0_50_in_n60_rate": 0.08333333333333333,
+      "sim_ge_0_50_in_all278": 11,
+      "sim_ge_0_50_in_all278_rate": 0.039568345323741004,
+      "over_representation_note": "Stratified n=60 subset contains 5/60 (8.3%) neurons with sim_cal_rec >= 0.50 vs 11/278 (4.0%) across all 278 neurons.",
+      "ewl_full_energy_merge": {
+        "n": 60,
+        "mean": 0.3709239885917969,
+        "median": 0.3853862927794565,
+        "std": 0.2979665325397616,
+        "ci_low": 0.2947769272544419,
+        "ci_high": 0.44637831549232293,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_ge_p75_renorm_energy_merge": {
+        "n": 60,
+        "mean": 0.4588769759465088,
+        "median": 0.4785285693723039,
+        "std": 0.307374594135971,
+        "ci_low": 0.3788143840328864,
+        "ci_high": 0.5355532424096203,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "top_p999_lift": {
+        "n": 60,
+        "mean": 0.7533333333333334,
+        "median": 0.8500000000000001,
+        "std": 0.2642332474151351,
+        "ci_low": 0.6833124999999999,
+        "ci_high": 0.8149999999999998,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "top100_lift": {
+        "n": 60,
+        "mean": 0.8716666666666667,
+        "median": 0.95,
+        "std": 0.19340102068567241,
+        "ci_low": 0.8200000000000001,
+        "ci_high": 0.9166666666666666,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      }
+    },
+    "energy_vs_kl_sanity_check": {
+      "eval_energy_vs_kl_share": {
+        "n_neurons": 278,
+        "n_bands": 4,
+        "n_pairs": 1112,
+        "within_band": {
+          "p99.9+": {
+            "n": 278,
+            "spearman_rho": 0.7902036970374159,
+            "spearman_p": 1.233267054168715e-60,
+            "spearman_ci_low": 0.730428782712242,
+            "spearman_ci_high": 0.83879035691504,
+            "pearson_r": 0.740956381268174,
+            "pearson_p": 1.2139878165813028e-49,
+            "pearson_ci_low": 0.6737752290488118,
+            "pearson_ci_high": 0.8003103139037168,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "p97_99.9": {
+            "n": 278,
+            "spearman_rho": 0.8054104986652345,
+            "spearman_p": 1.2028008467748275e-64,
+            "spearman_ci_low": 0.7432430945916034,
+            "spearman_ci_high": 0.8581550910952188,
+            "pearson_r": 0.8169486834649916,
+            "pearson_p": 6.201029668298519e-68,
+            "pearson_ci_low": 0.7631576792747755,
+            "pearson_ci_high": 0.8636171569178385,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "p75_97": {
+            "n": 278,
+            "spearman_rho": 0.8667256482458147,
+            "spearman_p": 2.3271842237148335e-85,
+            "spearman_ci_low": 0.8197461202575134,
+            "spearman_ci_high": 0.9020125518974831,
+            "pearson_r": 0.8915296492973391,
+            "pearson_p": 6.363459053205825e-97,
+            "pearson_ci_low": 0.857070426955101,
+            "pearson_ci_high": 0.9200540645095879,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "lt_p75": {
+            "n": 278,
+            "spearman_rho": 0.8848809155773086,
+            "spearman_p": 1.4497300647131808e-93,
+            "spearman_ci_low": 0.846556701414063,
+            "spearman_ci_high": 0.9157246353596529,
+            "pearson_r": 0.8966036280777755,
+            "pearson_p": 1.2319991894879543e-99,
+            "pearson_ci_low": 0.8518213104157334,
+            "pearson_ci_high": 0.9327603918740562,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          }
+        },
+        "pooled": {
+          "spearman_rho": 0.8608292187928771,
+          "spearman_p_naive_pair": 0.0,
+          "pearson_r": 0.826918508977617,
+          "pearson_p_naive_pair": 8.8059985459609515e-280,
+          "neuron_clustered_bootstrap_ci": {
+            "bootstrap_unit": "neuron_cluster_all_4_bands",
+            "n_bootstrap": 2000,
+            "spearman_ci_low": 0.8304989395154729,
+            "spearman_ci_high": 0.8870974388778191,
+            "pearson_ci_low": 0.788034006641149,
+            "pearson_ci_high": 0.8604084846063456
+          },
+          "pair_level_bootstrap_ci": {
+            "bootstrap_unit": "flattened_neuron_band_pair",
+            "n_bootstrap": 2000,
+            "spearman_ci_low": 0.8380896678081546,
+            "spearman_ci_high": 0.8815379110999255,
+            "pearson_ci_low": 0.7984880542196914,
+            "pearson_ci_high": 0.8538045407137338
+          },
+          "permuted_neuron_null": {
+            "description": "Randomly permute neuron rows of KLShare matrix (preserving exact per-band marginal distributions and band means) and recompute pooled correlation.",
+            "n_permutations": 1000,
+            "seed": 3542,
+            "spearman_mean": 0.10900632518852077,
+            "spearman_std": 0.033017761732957424,
+            "spearman_q025": 0.04471306205275416,
+            "spearman_q975": 0.1717300109276581,
+            "spearman_p_empirical_ge_obs": 0.000999000999000999,
+            "pearson_mean": 0.07625624801541664,
+            "pearson_std": 0.03428901220138844,
+            "pearson_q025": 0.011735083872215146,
+            "pearson_q975": 0.14200186693923444,
+            "pearson_p_empirical_ge_obs": 0.000999000999000999
+          }
+        }
+      },
+      "corpus_energy_vs_kl_share": {
+        "n_neurons": 278,
+        "n_bands": 4,
+        "n_pairs": 1112,
+        "within_band": {
+          "p99.9+": {
+            "n": 278,
+            "spearman_rho": 0.5390883913504411,
+            "spearman_p": 2.329728746254864e-22,
+            "spearman_ci_low": 0.4409340070493389,
+            "spearman_ci_high": 0.6285554180186841,
+            "pearson_r": 0.5469467357934823,
+            "pearson_p": 4.3227368107981905e-23,
+            "pearson_ci_low": 0.4520404376006686,
+            "pearson_ci_high": 0.6386036070242508,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "p97_99.9": {
+            "n": 278,
+            "spearman_rho": 0.704631310672901,
+            "spearman_p": 5.091651181047161e-43,
+            "spearman_ci_low": 0.620976098344375,
+            "spearman_ci_high": 0.7716755923432367,
+            "pearson_r": 0.7068250306642074,
+            "pearson_p": 2.1668172712570905e-43,
+            "pearson_ci_low": 0.6202351605633576,
+            "pearson_ci_high": 0.7762652661061465,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "p75_97": {
+            "n": 278,
+            "spearman_rho": 0.7955595695796919,
+            "spearman_p": 5.215661855482452e-62,
+            "spearman_ci_low": 0.7317387339269754,
+            "spearman_ci_high": 0.8464711682103142,
+            "pearson_r": 0.8458529862233921,
+            "pearson_p": 2.651093908163515e-77,
+            "pearson_ci_low": 0.8008012999110287,
+            "pearson_ci_high": 0.8828997043836215,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "lt_p75": {
+            "n": 278,
+            "spearman_rho": 0.8677360429113329,
+            "spearman_p": 8.763166346442348e-86,
+            "spearman_ci_low": 0.8298066726369023,
+            "spearman_ci_high": 0.8991020787450726,
+            "pearson_r": 0.8655678463155272,
+            "pearson_p": 7.057157768368142e-85,
+            "pearson_ci_low": 0.8224507210393153,
+            "pearson_ci_high": 0.9019869504505624,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          }
+        },
+        "pooled": {
+          "spearman_rho": 0.7756999825973987,
+          "spearman_p_naive_pair": 3.9775630453890407e-224,
+          "pearson_r": 0.7324076553374396,
+          "pearson_p_naive_pair": 1.6322564399607854e-187,
+          "neuron_clustered_bootstrap_ci": {
+            "bootstrap_unit": "neuron_cluster_all_4_bands",
+            "n_bootstrap": 2000,
+            "spearman_ci_low": 0.7379122156767808,
+            "spearman_ci_high": 0.8115648167001637,
+            "pearson_ci_low": 0.6853280889081437,
+            "pearson_ci_high": 0.7773465823670648
+          },
+          "pair_level_bootstrap_ci": {
+            "bootstrap_unit": "flattened_neuron_band_pair",
+            "n_bootstrap": 2000,
+            "spearman_ci_low": 0.7443175702015685,
+            "spearman_ci_high": 0.8050221500890135,
+            "pearson_ci_low": 0.6963213202892542,
+            "pearson_ci_high": 0.7686518005772718
+          },
+          "permuted_neuron_null": {
+            "description": "Randomly permute neuron rows of KLShare matrix (preserving exact per-band marginal distributions and band means) and recompute pooled correlation.",
+            "n_permutations": 1000,
+            "seed": 3642,
+            "spearman_mean": 0.12478881580734702,
+            "spearman_std": 0.03281025851328917,
+            "spearman_q025": 0.06192936956615409,
+            "spearman_q975": 0.187628458950416,
+            "spearman_p_empirical_ge_obs": 0.000999000999000999,
+            "pearson_mean": 0.0969642096436132,
+            "pearson_std": 0.03486128246466168,
+            "pearson_q025": 0.030760808394349064,
+            "pearson_q975": 0.16344217535978262,
+            "pearson_p_empirical_ge_obs": 0.000999000999000999
+          }
+        }
+      },
+      "ge_20pct_max_eval_vs_kl": {
+        "n": 278,
+        "spearman_rho": 0.8691977209458521,
+        "spearman_p": 2.1028383362143925e-86,
+        "spearman_ci_low": 0.8221373681259836,
+        "spearman_ci_high": 0.90532588424687,
+        "pearson_r": 0.7625202070873367,
+        "pearson_p": 3.987576889259479e-54,
+        "pearson_ci_low": 0.688702497866329,
+        "pearson_ci_high": 0.8263770439034809,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ge_20pct_max_corpus_vs_kl": {
+        "n": 278,
+        "spearman_rho": 0.4845766831535243,
+        "spearman_p": 8.924484164374282e-18,
+        "spearman_ci_low": 0.37633085103603725,
+        "spearman_ci_high": 0.5822144097495117,
+        "pearson_r": 0.5239938232211367,
+        "pearson_p": 5.247485471416479e-21,
+        "pearson_ci_low": 0.40616476056460443,
+        "pearson_ci_high": 0.6217476537238078,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "gate_closed_eval_vs_kl": {
+        "n": 278,
+        "spearman_rho": 0.8912342563219774,
+        "spearman_p": 9.067050272234922e-97,
+        "spearman_ci_low": 0.8501228666905706,
+        "spearman_ci_high": 0.9211062255167979,
+        "pearson_r": 0.9243642389278388,
+        "pearson_p": 1.6254687570638063e-117,
+        "pearson_ci_low": 0.8979692833213191,
+        "pearson_ci_high": 0.9456607054283401,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "gate_closed_corpus_vs_kl": {
+        "n": 278,
+        "spearman_rho": 0.8193122057606613,
+        "spearman_p": 1.2309936766301634e-68,
+        "spearman_ci_low": 0.7638312989109968,
+        "spearman_ci_high": 0.8621216266078027,
+        "pearson_r": 0.8446267711491308,
+        "pearson_p": 7.229200615129624e-77,
+        "pearson_ci_low": 0.7978351493356663,
+        "pearson_ci_high": 0.8849638665348482,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      }
+    }
+  },
+  "qwen3_17b": {
+    "n_neurons": 50,
+    "n_heldout_neurons": 40,
+    "zero_ablation_sanity_kl": 0.0,
+    "band_mapping": {
+      "p99.9+": "p99.9_plus detection accuracy (dead_zone, own & no_label, gpt-6.1-terra@none, fwd)",
+      "p97_99.9": "p97_99.9 detection accuracy (dead_zone, own & no_label)",
+      "p75_97": "Equal-weight (50/50) merge of p90_97 and p75_90 detection accuracy (corpus L2-energy-weighted merge also reported)",
+      "lt_p75": "Untested in detection (1.1% mean KL share; lift set to 0 in full EWL)"
+    },
+    "all_50": {
+      "n_neurons": 50,
+      "bands": {
+        "p99.9+": {
+          "kl_share": {
+            "n": 50,
+            "mean": 0.4103834135372672,
+            "median": 0.4157672602885797,
+            "std": 0.26633037593248265,
+            "ci_low": 0.33572987666288834,
+            "ci_high": 0.4836301771124885,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "own_acc_equal_merge": {
+            "n": 50,
+            "mean": 0.7816666666666667,
+            "median": 0.7916666666666667,
+            "std": 0.14471999706682007,
+            "ci_low": 0.7433333333333334,
+            "ci_high": 0.8200416666666666,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "no_label_acc_equal_merge": {
+            "n": 50,
+            "mean": 0.5316666666666666,
+            "median": 0.5,
+            "std": 0.24039956346336963,
+            "ci_low": 0.4633333333333334,
+            "ci_high": 0.5966666666666667,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          }
+        },
+        "p97_99.9": {
+          "kl_share": {
+            "n": 50,
+            "mean": 0.43071654860632386,
+            "median": 0.4042755743870565,
+            "std": 0.19405322268543493,
+            "ci_low": 0.3796205356070856,
+            "ci_high": 0.48349203932073614,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "own_acc_equal_merge": {
+            "n": 50,
+            "mean": 0.6533333333333334,
+            "median": 0.6666666666666666,
+            "std": 0.17033380592876116,
+            "ci_low": 0.605,
+            "ci_high": 0.7016666666666667,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "no_label_acc_equal_merge": {
+            "n": 50,
+            "mean": 0.45666666666666667,
+            "median": 0.45833333333333337,
+            "std": 0.2260275102153489,
+            "ci_low": 0.39666666666666667,
+            "ci_high": 0.5183333333333333,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          }
+        },
+        "p75_97": {
+          "kl_share": {
+            "n": 50,
+            "mean": 0.14799262143129102,
+            "median": 0.1325385169025302,
+            "std": 0.11553178102582265,
+            "ci_low": 0.11710141373394847,
+            "ci_high": 0.18138350568490214,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "own_acc_equal_merge": {
+            "n": 50,
+            "mean": 0.55,
+            "median": 0.5416666666666667,
+            "std": 0.12256702548794049,
+            "ci_low": 0.5166666666666667,
+            "ci_high": 0.5833333333333334,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "no_label_acc_equal_merge": {
+            "n": 50,
+            "mean": 0.4683333333333334,
+            "median": 0.45833333333333337,
+            "std": 0.13324827218698307,
+            "ci_low": 0.43331249999999993,
+            "ci_high": 0.5033541666666667,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "own_acc_energy_merge": {
+            "n": 50,
+            "mean": 0.5534323097416214,
+            "median": 0.5667058594780248,
+            "std": 0.14543505073103816,
+            "ci_low": 0.5121572889262168,
+            "ci_high": 0.5945142641293827,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "no_label_acc_energy_merge": {
+            "n": 50,
+            "mean": 0.47374246495120625,
+            "median": 0.47926078226916324,
+            "std": 0.15421703126340855,
+            "ci_low": 0.43251129912299774,
+            "ci_high": 0.5165424907021245,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          }
+        },
+        "lt_p75": {
+          "kl_share": {
+            "n": 50,
+            "mean": 0.010907416425117871,
+            "median": 0.010258731503458067,
+            "std": 0.007413622676303489,
+            "ci_low": 0.008914025626976714,
+            "ci_high": 0.012944697182235312,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "own_acc_equal_merge": null,
+          "no_label_acc_equal_merge": null,
+          "status": "untested"
+        }
+      },
+      "ewl_full_equal_merge": {
+        "n": 50,
+        "mean": 0.39739322416210077,
+        "median": 0.36383327911445906,
+        "std": 0.2524885155411999,
+        "ci_low": 0.32952276822074195,
+        "ci_high": 0.4700425917880996,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_full_energy_merge": {
+        "n": 50,
+        "mean": 0.3979506104242197,
+        "median": 0.3544374164671177,
+        "std": 0.25676658739774405,
+        "ci_low": 0.3248597234574967,
+        "ci_high": 0.47442941676569345,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_ge_p75_renorm_equal_merge": {
+        "n": 50,
+        "mean": 0.4016043714540726,
+        "median": 0.3681544429352006,
+        "std": 0.2545559852569585,
+        "ci_low": 0.33234460406806343,
+        "ci_high": 0.4696984335590713,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_ge_p75_renorm_energy_merge": {
+        "n": 50,
+        "mean": 0.4021418352295227,
+        "median": 0.36207105867535805,
+        "std": 0.2588597577484784,
+        "ci_low": 0.33116229706749495,
+        "ci_high": 0.4717647962899765,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "top_p999_lift": {
+        "n": 50,
+        "mean": 0.5633333333333334,
+        "median": 0.5833333333333334,
+        "std": 0.28943999413364013,
+        "ci_low": 0.4833333333333333,
+        "ci_high": 0.6399999999999999,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_ratio_to_p999_lift": 0.7054317588676344,
+      "lift_over_no_label_floor": {
+        "ewl_raw_full_equal_merge": {
+          "n": 50,
+          "mean": 0.2049153198229071,
+          "median": 0.1745860662374231,
+          "std": 0.23778397076107902,
+          "ci_low": 0.1386784556755639,
+          "ci_high": 0.27022695757857007,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        },
+        "ewl_scaled_2x_full_equal_merge": {
+          "n": 50,
+          "mean": 0.4098306396458142,
+          "median": 0.3491721324748462,
+          "std": 0.47556794152215803,
+          "ci_low": 0.2898336068540276,
+          "ci_high": 0.5386967767596873,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        },
+        "ewl_raw_ge_p75_renorm_equal_merge": {
+          "n": 50,
+          "mean": 0.20717198394844566,
+          "median": 0.17735600239957786,
+          "std": 0.23978386153341916,
+          "ci_low": 0.14121308373561692,
+          "ci_high": 0.2740584563053434,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        },
+        "ewl_scaled_2x_ge_p75_renorm_equal_merge": {
+          "n": 50,
+          "mean": 0.4143439678968913,
+          "median": 0.3547120047991557,
+          "std": 0.4795677230668383,
+          "ci_low": 0.27929646972310024,
+          "ci_high": 0.5413740137566067,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        },
+        "ewl_raw_full_energy_merge": {
+          "n": 50,
+          "mean": 0.20606238584156755,
+          "median": 0.17385029526771634,
+          "std": 0.24092163053185853,
+          "ci_low": 0.14063754151349656,
+          "ci_high": 0.272349519862461,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        },
+        "ewl_scaled_2x_full_energy_merge": {
+          "n": 50,
+          "mean": 0.4121247716831351,
+          "median": 0.3477005905354327,
+          "std": 0.48184326106371705,
+          "ci_low": 0.2782480668799784,
+          "ci_high": 0.5472212272001217,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        },
+        "top_p999_raw_own_minus_no_label": {
+          "n": 50,
+          "mean": 0.24999999999999997,
+          "median": 0.24999999999999994,
+          "std": 0.29063227656508817,
+          "ci_low": 0.17,
+          "ci_high": 0.32833333333333337,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        },
+        "top_p999_scaled_2x_own_minus_no_label": {
+          "n": 50,
+          "mean": 0.49999999999999994,
+          "median": 0.4999999999999999,
+          "std": 0.5812645531301763,
+          "ci_low": 0.33333333333333326,
+          "ci_high": 0.6666666666666665,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        }
+      }
+    },
+    "heldout_40": {
+      "n_neurons": 40,
+      "bands": {
+        "p99.9+": {
+          "kl_share": {
+            "n": 40,
+            "mean": 0.42163433635757774,
+            "median": 0.4214838181385947,
+            "std": 0.2450138806269238,
+            "ci_low": 0.34986543296410544,
+            "ci_high": 0.49477224829102134,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "own_acc_equal_merge": {
+            "n": 40,
+            "mean": 0.7770833333333332,
+            "median": 0.75,
+            "std": 0.1478568405558069,
+            "ci_low": 0.7332812499999999,
+            "ci_high": 0.8229166666666666,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "no_label_acc_equal_merge": {
+            "n": 40,
+            "mean": 0.5354166666666667,
+            "median": 0.5,
+            "std": 0.23862102354464262,
+            "ci_low": 0.4625,
+            "ci_high": 0.6104166666666667,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          }
+        },
+        "p97_99.9": {
+          "kl_share": {
+            "n": 40,
+            "mean": 0.4308351951172538,
+            "median": 0.40306998589309606,
+            "std": 0.18338785012341602,
+            "ci_low": 0.3768221828984208,
+            "ci_high": 0.4893282403904526,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "own_acc_equal_merge": {
+            "n": 40,
+            "mean": 0.6229166666666667,
+            "median": 0.6666666666666666,
+            "std": 0.16450250909507583,
+            "ci_low": 0.5729166666666666,
+            "ci_high": 0.6729166666666666,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "no_label_acc_equal_merge": {
+            "n": 40,
+            "mean": 0.4583333333333333,
+            "median": 0.45833333333333337,
+            "std": 0.2208827150077022,
+            "ci_low": 0.39375,
+            "ci_high": 0.5270833333333333,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          }
+        },
+        "p75_97": {
+          "kl_share": {
+            "n": 40,
+            "mean": 0.1370394247707031,
+            "median": 0.12597148426980062,
+            "std": 0.10375801776879177,
+            "ci_low": 0.10563074208954853,
+            "ci_high": 0.16901266579254978,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "own_acc_equal_merge": {
+            "n": 40,
+            "mean": 0.546875,
+            "median": 0.5416666666666667,
+            "std": 0.11979456982732548,
+            "ci_low": 0.5104166666666666,
+            "ci_high": 0.5833333333333334,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "no_label_acc_equal_merge": {
+            "n": 40,
+            "mean": 0.48125,
+            "median": 0.5,
+            "std": 0.13475140665477892,
+            "ci_low": 0.4395572916666667,
+            "ci_high": 0.5229166666666666,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "own_acc_energy_merge": {
+            "n": 40,
+            "mean": 0.5478443669009077,
+            "median": 0.5667058594780248,
+            "std": 0.1444702362862363,
+            "ci_low": 0.5049918490456702,
+            "ci_high": 0.5916977123147339,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "no_label_acc_energy_merge": {
+            "n": 40,
+            "mean": 0.4916858767745437,
+            "median": 0.5,
+            "std": 0.15771628847388955,
+            "ci_low": 0.44109297257549485,
+            "ci_high": 0.5417003663199821,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          }
+        },
+        "lt_p75": {
+          "kl_share": {
+            "n": 40,
+            "mean": 0.010491043754465431,
+            "median": 0.010258731503458067,
+            "std": 0.007026138211573381,
+            "ci_low": 0.00841028832649879,
+            "ci_high": 0.012767380473359133,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "own_acc_equal_merge": null,
+          "no_label_acc_equal_merge": null,
+          "status": "untested"
+        }
+      },
+      "ewl_full_equal_merge": {
+        "n": 40,
+        "mean": 0.3688450316504414,
+        "median": 0.3258293752858392,
+        "std": 0.2377626354078566,
+        "ci_low": 0.2970066120789019,
+        "ci_high": 0.4392649514669457,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_full_energy_merge": {
+        "n": 40,
+        "mean": 0.3689571369434229,
+        "median": 0.32514796428557635,
+        "std": 0.24072605004813397,
+        "ci_low": 0.29817041624642426,
+        "ci_high": 0.44236219551013334,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_ge_p75_renorm_equal_merge": {
+        "n": 40,
+        "mean": 0.37266266134556864,
+        "median": 0.32861321019736345,
+        "std": 0.24003685477808603,
+        "ci_low": 0.3005182511046174,
+        "ci_high": 0.4445671055585984,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_ge_p75_renorm_energy_merge": {
+        "n": 40,
+        "mean": 0.37276809776697123,
+        "median": 0.32791000054376773,
+        "std": 0.2430589808246539,
+        "ci_low": 0.29913058084570665,
+        "ci_high": 0.4455925772496659,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "top_p999_lift": {
+        "n": 40,
+        "mean": 0.5541666666666666,
+        "median": 0.5,
+        "std": 0.2957136811116138,
+        "ci_low": 0.4666666666666666,
+        "ci_high": 0.6458333333333333,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "ewl_ratio_to_p999_lift": 0.6655850195195936,
+      "lift_over_no_label_floor": {
+        "ewl_raw_full_equal_merge": {
+          "n": 40,
+          "mean": 0.18578590727338348,
+          "median": 0.16801271359185854,
+          "std": 0.21707931836533714,
+          "ci_low": 0.12135649868954133,
+          "ci_high": 0.24971495187964995,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        },
+        "ewl_scaled_2x_full_equal_merge": {
+          "n": 40,
+          "mean": 0.37157181454676697,
+          "median": 0.3360254271837171,
+          "std": 0.4341586367306743,
+          "ci_low": 0.23960521792573253,
+          "ci_high": 0.5044907073679961,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        },
+        "ewl_raw_ge_p75_renorm_equal_merge": {
+          "n": 40,
+          "mean": 0.18782191915410407,
+          "median": 0.17107658844214496,
+          "std": 0.2191202031086147,
+          "ci_low": 0.12269273919427459,
+          "ci_high": 0.2548805644185284,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        },
+        "ewl_scaled_2x_ge_p75_renorm_equal_merge": {
+          "n": 40,
+          "mean": 0.37564383830820813,
+          "median": 0.3421531768842899,
+          "std": 0.4382404062172294,
+          "ci_low": 0.23823065985683062,
+          "ci_high": 0.5144355426622821,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        },
+        "ewl_raw_full_energy_merge": {
+          "n": 40,
+          "mean": 0.18615588349096743,
+          "median": 0.16734237778984645,
+          "std": 0.21884924352433674,
+          "ci_low": 0.11872668091313171,
+          "ci_high": 0.2528104059743804,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        },
+        "ewl_scaled_2x_full_energy_merge": {
+          "n": 40,
+          "mean": 0.37231176698193486,
+          "median": 0.3346847555796929,
+          "std": 0.4376984870486735,
+          "ci_low": 0.23883527594397705,
+          "ci_high": 0.5067251624625414,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        },
+        "top_p999_raw_own_minus_no_label": {
+          "n": 40,
+          "mean": 0.2416666666666667,
+          "median": 0.24999999999999994,
+          "std": 0.28978329657583607,
+          "ci_low": 0.15833333333333333,
+          "ci_high": 0.32916666666666666,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        },
+        "top_p999_scaled_2x_own_minus_no_label": {
+          "n": 40,
+          "mean": 0.4833333333333334,
+          "median": 0.4999999999999999,
+          "std": 0.5795665931516721,
+          "ci_low": 0.3123958333333333,
+          "ci_high": 0.6583333333333333,
+          "bootstrap_unit": "neuron",
+          "n_bootstrap": 2000
+        }
+      }
+    },
+    "energy_vs_kl_sanity_check": {
+      "eval_energy_vs_kl_share": {
+        "n_neurons": 50,
+        "n_bands": 4,
+        "n_pairs": 200,
+        "within_band": {
+          "p99.9+": {
+            "n": 50,
+            "spearman_rho": 0.7823769507803121,
+            "spearman_p": 1.9462640442722033e-11,
+            "spearman_ci_low": 0.5860925713427333,
+            "spearman_ci_high": 0.8952610294933954,
+            "pearson_r": 0.7511242164845844,
+            "pearson_p": 3.3117538187248486e-10,
+            "pearson_ci_low": 0.5832779129971157,
+            "pearson_ci_high": 0.8812089419866159,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "p97_99.9": {
+            "n": 50,
+            "spearman_rho": 0.6363985594237694,
+            "spearman_p": 6.78755664464417e-07,
+            "spearman_ci_low": 0.38545396057857506,
+            "spearman_ci_high": 0.8061874182101954,
+            "pearson_r": 0.680959252998609,
+            "pearson_p": 5.273201375987519e-08,
+            "pearson_ci_low": 0.4736192990285489,
+            "pearson_ci_high": 0.8309189940742814,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "p75_97": {
+            "n": 50,
+            "spearman_rho": 0.8729411764705882,
+            "spearman_p": 1.4193668997073772e-16,
+            "spearman_ci_low": 0.7268461057391641,
+            "spearman_ci_high": 0.9520318413179689,
+            "pearson_r": 0.8536612612883719,
+            "pearson_p": 3.3569647770452745e-15,
+            "pearson_ci_low": 0.7243892321766584,
+            "pearson_ci_high": 0.9386117425512233,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "lt_p75": {
+            "n": 50,
+            "spearman_rho": 0.5811764705882353,
+            "spearman_p": 9.624042620392084e-06,
+            "spearman_ci_low": 0.3327825200995933,
+            "spearman_ci_high": 0.7766365870796392,
+            "pearson_r": 0.6217325832025079,
+            "pearson_p": 1.442990668077355e-06,
+            "pearson_ci_low": 0.386749651316277,
+            "pearson_ci_high": 0.7940762282480809,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          }
+        },
+        "pooled": {
+          "spearman_rho": 0.9068281707042678,
+          "spearman_p_naive_pair": 3.199544917627075e-76,
+          "pearson_r": 0.855434835801404,
+          "pearson_p_naive_pair": 1.7478591971063062e-58,
+          "neuron_clustered_bootstrap_ci": {
+            "bootstrap_unit": "neuron_cluster_all_4_bands",
+            "n_bootstrap": 2000,
+            "spearman_ci_low": 0.8547692404811248,
+            "spearman_ci_high": 0.941838382978612,
+            "pearson_ci_low": 0.781071115268037,
+            "pearson_ci_high": 0.9123318319367191
+          },
+          "pair_level_bootstrap_ci": {
+            "bootstrap_unit": "flattened_neuron_band_pair",
+            "n_bootstrap": 2000,
+            "spearman_ci_low": 0.8629078473093437,
+            "spearman_ci_high": 0.9356878361111634,
+            "pearson_ci_low": 0.8000481517268304,
+            "pearson_ci_high": 0.9021893644646896
+          },
+          "permuted_neuron_null": {
+            "description": "Randomly permute neuron rows of KLShare matrix (preserving exact per-band marginal distributions and band means) and recompute pooled correlation.",
+            "n_permutations": 1000,
+            "seed": 3542,
+            "spearman_mean": 0.6323779479486986,
+            "spearman_std": 0.03804265093015423,
+            "spearman_q025": 0.5608810845271132,
+            "spearman_q975": 0.7063891472286807,
+            "spearman_p_empirical_ge_obs": 0.000999000999000999,
+            "pearson_mean": 0.5034086811219637,
+            "pearson_std": 0.05596384308139162,
+            "pearson_q025": 0.40155707673350777,
+            "pearson_q975": 0.616399531516485,
+            "pearson_p_empirical_ge_obs": 0.000999000999000999
+          }
+        }
+      },
+      "corpus_energy_vs_kl_share": {
+        "n_neurons": 50,
+        "n_bands": 4,
+        "n_pairs": 200,
+        "within_band": {
+          "p99.9+": {
+            "n": 50,
+            "spearman_rho": 0.47015606242496993,
+            "spearman_p": 0.000570774366698643,
+            "spearman_ci_low": 0.1748986290635822,
+            "spearman_ci_high": 0.7006779304502325,
+            "pearson_r": 0.5135530296284657,
+            "pearson_p": 0.00013665811077733506,
+            "pearson_ci_low": 0.25939262052739953,
+            "pearson_ci_high": 0.7338775392501745,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "p97_99.9": {
+            "n": 50,
+            "spearman_rho": 0.5125090036014406,
+            "spearman_p": 0.0001417638469106819,
+            "spearman_ci_low": 0.20659721990960825,
+            "spearman_ci_high": 0.7219623815215119,
+            "pearson_r": 0.4928865992112655,
+            "pearson_p": 0.00027644074510474725,
+            "pearson_ci_low": 0.1853441787238655,
+            "pearson_ci_high": 0.7227165638508323,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "p75_97": {
+            "n": 50,
+            "spearman_rho": 0.7594237695078031,
+            "spearman_p": 1.6269127724739394e-10,
+            "spearman_ci_low": 0.5763872296976988,
+            "spearman_ci_high": 0.8824771210066477,
+            "pearson_r": 0.7199811776505213,
+            "pearson_p": 3.793665169763081e-09,
+            "pearson_ci_low": 0.5430808971115024,
+            "pearson_ci_high": 0.8718902922136811,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          },
+          "lt_p75": {
+            "n": 50,
+            "spearman_rho": 0.4466266506602641,
+            "spearman_p": 0.0011488645637934695,
+            "spearman_ci_low": 0.17003350696650874,
+            "spearman_ci_high": 0.6666830997895157,
+            "pearson_r": 0.4256050253569082,
+            "pearson_p": 0.002060696866152835,
+            "pearson_ci_low": 0.18279476506228426,
+            "pearson_ci_high": 0.6619938347166701,
+            "bootstrap_unit": "neuron",
+            "n_bootstrap": 2000
+          }
+        },
+        "pooled": {
+          "spearman_rho": 0.8409120228005702,
+          "spearman_p_naive_pair": 1.0660627444401318e-54,
+          "pearson_r": 0.7699371736707693,
+          "pearson_p_naive_pair": 1.7208798486150235e-40,
+          "neuron_clustered_bootstrap_ci": {
+            "bootstrap_unit": "neuron_cluster_all_4_bands",
+            "n_bootstrap": 2000,
+            "spearman_ci_low": 0.7667992120868532,
+            "spearman_ci_high": 0.8982241279470977,
+            "pearson_ci_low": 0.6577705384942089,
+            "pearson_ci_high": 0.8620947563629742
+          },
+          "pair_level_bootstrap_ci": {
+            "bootstrap_unit": "flattened_neuron_band_pair",
+            "n_bootstrap": 2000,
+            "spearman_ci_low": 0.7741621228570246,
+            "spearman_ci_high": 0.8877498262601196,
+            "pearson_ci_low": 0.6841906704146037,
+            "pearson_ci_high": 0.8424581964335226
+          },
+          "permuted_neuron_null": {
+            "description": "Randomly permute neuron rows of KLShare matrix (preserving exact per-band marginal distributions and band means) and recompute pooled correlation.",
+            "n_permutations": 1000,
+            "seed": 3642,
+            "spearman_mean": 0.6361081512037802,
+            "spearman_std": 0.040697148447862465,
+            "spearman_q025": 0.5572275556888923,
+            "spearman_q975": 0.7171807920198005,
+            "spearman_p_empirical_ge_obs": 0.000999000999000999,
+            "pearson_mean": 0.5126547687923076,
+            "pearson_std": 0.05869174114918541,
+            "pearson_q025": 0.39987387771861854,
+            "pearson_q975": 0.6233576279860347,
+            "pearson_p_empirical_ge_obs": 0.000999000999000999
+          }
+        }
+      },
+      "gate_closed_eval_vs_kl": {
+        "n": 50,
+        "spearman_rho": 0.9531332533013206,
+        "spearman_p": 1.436657923738897e-26,
+        "spearman_ci_low": 0.9108165039113116,
+        "spearman_ci_high": 0.9691082532631663,
+        "pearson_r": 0.89148707947496,
+        "pearson_p": 3.995419195094775e-18,
+        "pearson_ci_low": 0.7958031294005389,
+        "pearson_ci_high": 0.9600994105315631,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      },
+      "gate_closed_corpus_vs_kl": {
+        "n": 50,
+        "spearman_rho": 0.8798559423769508,
+        "spearman_p": 4.017826085168406e-17,
+        "spearman_ci_low": 0.7815548707351423,
+        "spearman_ci_high": 0.9376053893414291,
+        "pearson_r": 0.7895415469258741,
+        "pearson_p": 9.514243594255058e-12,
+        "pearson_ci_low": 0.6350537253290891,
+        "pearson_ci_high": 0.9197704863274082,
+        "bootstrap_unit": "neuron",
+        "n_bootstrap": 2000
+      }
+    },
+    "inconclusive_causal_disclosure": {
+      "status": "inconclusive_simulator_floor_compression",
+      "n_neurons": 50,
+      "median_simulator_corr": 0.07858385770224857,
+      "strong20_rec_eval64_ge_0_25_count": 34,
+      "strong20_rec_8k_ge_0_25_count": 28,
+      "sim_cal_rec_ge_0_25_count": 0,
+      "sim_cal_rec_active_ge_0_50_count": 0,
+      "median_sim_cal_rec": -0.029177848791978267,
+      "max_sim_cal_rec": 0.22912963105701922,
+      "median_sim_cal_rec_active": 0.033612693258699144,
+      "max_sim_cal_rec_active": 0.3922993730034894,
+      "median_strong20_rec_eval64": 0.3555985525247947,
+      "median_strong20_rec_8k": 0.26486472908898734
+    }
+  },
+  "goodfire_table4_comparison": {
+    "mandatory_caveat": "Goodfire Table 4 uses a different model (Qwen3.6-35B-A3B MoE), labeler (Neuron Scientist agent), judge (Claude Opus 5.5), and random-text distractors; Qwen3-4B uses Ulto85 Claude Opus explanations and Qwen3-1.7B uses single-pass gpt-4.1 labels, both judged by gpt-6.1-terra@none against dead-zone distractors.",
+    "goodfire_table4": {
+      "source": "Goodfire (2026-11-10), Neurons as an Interpretable Basis, Table 4 (random-text distractors)",
+      "url": "https://www.goodfire.com/research/neurons-as-an-interpretable-basis",
+      "model": "Qwen3.6-35B-A3B (MoE)",
+      "labeler": "Neuron Scientist agent",
+      "judge": "Claude Opus 5.5",
+      "n_poles": 496,
+      "bands": {
+        "p97_99": 0.906,
+        "p99_99.9": 0.932,
+        "p99.9_99.99": 0.952,
+        "p99.99_plus": 0.972,
+        "top_1000_or_top100": 0.97,
+        "p75_97": null,
+        "p25_75": null
+      }
+    },
+    "qwen3_4b_pole_means": {
+      "unit": "active_pole",
+      "judge": "gpt-6.1-terra@none",
+      "distractor": "dead_zone",
+      "p97_99": {
+        "mean": 0.6083532219570406,
+        "n_poles": 419
+      },
+      "p99_99.9": {
+        "mean": 0.6765169424743892,
+        "n_poles": 423
+      },
+      "p99.9_plus_combined": {
+        "mean": 0.8281839622641509,
+        "n_poles": 424
+      },
+      "top100": {
+        "mean": 0.8880896226415095,
+        "n_poles": 424
+      },
+      "p75_97": {
+        "mean": 0.5424679487179488,
+        "n_poles": 416
+      },
+      "p25_75": {
+        "mean": 0.5043177892918825,
+        "n_poles": 386
+      }
+    },
+    "qwen3_4b_neuron_means": {
+      "unit": "neuron_mean_over_active_poles",
+      "judge": "gpt-6.1-terra@none",
+      "distractor": "dead_zone",
+      "p97_99": {
+        "mean": 0.6125454545454545,
+        "n_neurons": 275
+      },
+      "p99_99.9": {
+        "mean": 0.6862214199759326,
+        "n_neurons": 277
+      },
+      "p99.9_plus_combined": {
+        "mean": 0.8393884892086332,
+        "n_neurons": 278
+      },
+      "top100": {
+        "mean": 0.8969424460431655,
+        "n_neurons": 278
+      },
+      "p75_97": {
+        "mean": 0.5485347985347986,
+        "n_neurons": 273
+      },
+      "p25_75": {
+        "mean": 0.4993662864385297,
+        "n_neurons": 263
+      }
+    },
+    "qwen3_17b_heldout_80": {
+      "unit": "pole_and_neuron_reported",
+      "n_poles": 80,
+      "n_neurons": 40,
+      "judge": "gpt-6.1-terra@none",
+      "distractor": "dead_zone",
+      "p97_99": 0.594375,
+      "p99_99.9": 0.6787671232876713,
+      "p97_99_per_neuron": 0.594375,
+      "p99_99.9_per_neuron": 0.6585416666666666,
+      "p97_99.9_combined": 0.6229166666666666,
+      "p99.9_plus_combined": 0.7770833333333333,
+      "p99.9_plus_per_neuron": 0.7770833333333333,
+      "p90_97": 0.5458333333333333,
+      "p75_90": 0.5479166666666666,
+      "p75_97_equal_merge": 0.546875,
+      "p25_75": null
+    },
+    "qwen3_17b_all_100": {
+      "unit": "pole_and_neuron_reported",
+      "n_poles": 100,
+      "n_neurons": 50,
+      "judge": "gpt-6.1-terra@none",
+      "distractor": "dead_zone",
+      "p97_99": 0.6181666666666666,
+      "p99_99.9": 0.7218518518518517,
+      "p97_99_per_neuron": 0.6181666666666666,
+      "p99_99.9_per_neuron": 0.6976666666666667,
+      "p97_99.9_combined": 0.6533333333333334,
+      "p99.9_plus_combined": 0.7816666666666666,
+      "p99.9_plus_per_neuron": 0.7816666666666667,
+      "p90_97": 0.5533333333333332,
+      "p75_90": 0.5466666666666666,
+      "p75_97_equal_merge": 0.55,
+      "p25_75": null
+    }
+  },
+  "statistical_disclosures": {
+    "base_rates_and_detection_vs_causal_4b": {
+      "n_ulto85_catalog_neurons": 280,
+      "n_scored_neurons": 278,
+      "unscored_ulto85_neurons": [
+        [
+          12,
+          1597
+        ],
+        [
+          24,
+          289
+        ]
+      ],
+      "n_active_poles": 424,
+      "n_excluded_poles": 132,
+      "sim_lt_0_50_all": 267,
+      "sim_lt_0_25_all": 251,
+      "sim_le_0_00_all": 155,
+      "sim_ge_0_25_all": 27,
+      "sim_ge_0_50_all": 11,
+      "active_ge_0_50_all": 64,
+      "top100_ge_0_80_pass_count": 235,
+      "top100_lt_0_80_fail_count": 43,
+      "pass_sim_ge_0_25": 27,
+      "pass_sim_ge_0_50": 11,
+      "pass_sim_lt_0_50": 224,
+      "pass_active_ge_0_50": 63,
+      "fail_sim_ge_0_25": 0,
+      "fail_sim_ge_0_50": 0,
+      "fail_active_ge_0_50": 1,
+      "top100_eq_1_00_count": 86,
+      "top100_eq_1_00_sim_min": -7.109968565255301,
+      "top100_eq_1_00_sim_max": 0.9094668732719502,
+      "top100_eq_1_00_sim_median": 0.020242158545438982,
+      "spearman_top100_vs_sim_cal_rec": 0.14214724170908338,
+      "spearman_top100_vs_sim_cal_rec_active": 0.48497565094613104
+    },
+    "qwen17b_inconclusive_causal_disclosure": {
+      "status": "inconclusive_simulator_floor_compression",
+      "n_neurons": 50,
+      "median_simulator_corr": 0.07858385770224857,
+      "strong20_rec_eval64_ge_0_25_count": 34,
+      "strong20_rec_8k_ge_0_25_count": 28,
+      "sim_cal_rec_ge_0_25_count": 0,
+      "sim_cal_rec_active_ge_0_50_count": 0,
+      "median_sim_cal_rec": -0.029177848791978267,
+      "max_sim_cal_rec": 0.22912963105701922,
+      "median_sim_cal_rec_active": 0.033612693258699144,
+      "max_sim_cal_rec_active": 0.3922993730034894,
+      "median_strong20_rec_eval64": 0.3555985525247947,
+      "median_strong20_rec_8k": 0.26486472908898734
+    },
+    "yesno_logprob_imputation_4b": {
+      "gpt-6-luna@none__ordinary_nonfiring": {
+        "imputed_count": 7566,
+        "total": 8480,
+        "imputed_rate": 0.8922169811320755
+      },
+      "gpt-6-luna@none__top100_firing": {
+        "imputed_count": 1022,
+        "total": 1696,
+        "imputed_rate": 0.6025943396226415
+      },
+      "gpt-6.1-terra@none__ordinary_nonfiring": {
+        "imputed_count": 4086,
+        "total": 4240,
+        "imputed_rate": 0.9636792452830188
+      },
+      "gpt-6.1-terra@none__top100_firing": {
+        "imputed_count": 704,
+        "total": 848,
+        "imputed_rate": 0.8301886792452831
+      }
+    },
+    "slot_b_preference_p_pred_a_4b": {
+      "gpt-6-luna@none__p25_75__own": {
+        "pred_a_count": 1226,
+        "total": 2316,
+        "p_pred_a": 0.5293609671848014
+      },
+      "gpt-6-luna@none__p75_97__own": {
+        "pred_a_count": 1327,
+        "total": 2496,
+        "p_pred_a": 0.5316506410256411
+      },
+      "gpt-6-luna@none__p97_99__own": {
+        "pred_a_count": 2250,
+        "total": 4190,
+        "p_pred_a": 0.5369928400954654
+      },
+      "gpt-6-luna@none__p99.9_plus__own": {
+        "pred_a_count": 4330,
+        "total": 8480,
+        "p_pred_a": 0.5106132075471698
+      },
+      "gpt-6-luna@none__p99_99.9__own": {
+        "pred_a_count": 1332,
+        "total": 2538,
+        "p_pred_a": 0.524822695035461
+      },
+      "gpt-6.1-terra@none__p25_75__own": {
+        "pred_a_count": 894,
+        "total": 2316,
+        "p_pred_a": 0.3860103626943005
+      },
+      "gpt-6.1-terra@none__p75_97__own": {
+        "pred_a_count": 940,
+        "total": 2496,
+        "p_pred_a": 0.3766025641025641
+      },
+      "gpt-6.1-terra@none__p97_99__own": {
+        "pred_a_count": 1720,
+        "total": 4190,
+        "p_pred_a": 0.4105011933174224
+      },
+      "gpt-6.1-terra@none__p99.9_plus__full_explanation": {
+        "pred_a_count": 706,
+        "total": 1480,
+        "p_pred_a": 0.47702702702702704
+      },
+      "gpt-6.1-terra@none__p99.9_plus__no_label": {
+        "pred_a_count": 1056,
+        "total": 2544,
+        "p_pred_a": 0.41509433962264153
+      },
+      "gpt-6.1-terra@none__p99.9_plus__own": {
+        "pred_a_count": 3847,
+        "total": 8480,
+        "p_pred_a": 0.4536556603773585
+      },
+      "gpt-6.1-terra@none__p99.9_plus__wrong": {
+        "pred_a_count": 1036,
+        "total": 2544,
+        "p_pred_a": 0.40723270440251574
+      },
+      "gpt-6.1-terra@none__p99_99.9__own": {
+        "pred_a_count": 1080,
+        "total": 2538,
+        "p_pred_a": 0.425531914893617
+      },
+      "gpt-6.1-terra@none__top100__own": {
+        "pred_a_count": 4019,
+        "total": 8480,
+        "p_pred_a": 0.47393867924528305
+      }
+    },
+    "top100_token_in_label_lexical_overlap": {
+      "source": "computed_live_from_snippets_4b_top100",
+      "n_pairs": 8480,
+      "exact_word_ci_len_ge_2_count": 2591,
+      "exact_word_ci_len_ge_2_rate": 0.30554245283018866,
+      "substring_ci_len_ge_2_count": 3210,
+      "substring_ci_len_ge_2_rate": 0.3785377358490566
+    },
+    "post_hoc_top100_disclosure": "The top100 sweep on Qwen3-4B was added post hoc after observing that 295/424 active poles (69.6%) had p99.9 < 20% of max activation."
+  },
+  "figure_path": "figures/main_detection_vs_kl_by_band.png",
+  "reading_sheet": null
+}
