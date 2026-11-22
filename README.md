@@ -1,6 +1,6 @@
 # How much of a neuron does a detection score cover?
 
-On Qwen3-4B and Qwen3-1.7B, neuron labels score 0.78 to 0.84 on Goodfire's detection test for the strongest activations, which carry 29 to 41% of the neuron's downstream effect; below them accuracy falls toward chance.
+A high score on Goodfire's detection test shows a label fits a neuron's strongest activations. It does not show the label fits the rest. On Qwen3-4B and Qwen3-1.7B, labels score 0.78 to 0.84 on the strongest activations. Those activations carry 29 to 41% of the neuron's downstream effect. On weaker activations, accuracy falls toward chance.
 
 ![Detection accuracy vs. exact float32 KL share by band](figures/main_detection_vs_kl_by_band.png)
 
