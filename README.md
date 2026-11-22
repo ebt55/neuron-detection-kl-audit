@@ -85,6 +85,10 @@ Part 1 predictions were written before the held-out `Qwen3-1.7B` run on the same
 - **`top100` post hoc & lexical overlap:** Added post hoc; `30.6%` (`2,591/8,480`) exact word / `37.9%` (`3,210/8,480`) CI substring target-token overlap with Ulto85 labels (computed from the `top100` snippet file `snippets_4b_top100.jsonl`, which is not shipped). Unipolar (`n = 132`) `< p75` KL (`0.353`) reflects opposite-sign energy (`0.351`) vs. two-sided (`0.027` / `0.000`).
 - **Position bias, logprob imputation & KL sanity check:** Judges show mild Slot B preference (`P(pred=A) = 0.454` `p99.9+`, `0.474` `top100`, `0.415` `no_label`, `0.407` `wrong`, `0.411` `p97–99`, at `P(pos=A) = 0.500`); in exploratory YES/NO probes, `96.4%` (`4,086/4,240`) `terra` / `89.2%` (`7,566/8,480`) `luna` ordinary `YES` logprobs were floor-imputed, and `FPR_ord` missed `sim < 0` (`PCR = 0.000`). Pooled `EvalEnergy` vs `KLShare` is a second-order sanity check (`4B`: `ρ = 0.861`, clustered `[0.830, 0.887]`, pair `[0.838, 0.882]`, null `[0.045, 0.172]`; `1.7B`: `ρ = 0.907`, clustered `[0.855, 0.942]`, pair `[0.863, 0.936]`, null `[0.561, 0.706]`).
 
+## LLM usage
+
+I used Claude Fable 5.2, Claude Opus 5.5 and Gemini Neon to brainstorm and rank project ideas and to find room for improvement. Based on those findings, I chose this project. Fable 5.2 did the design, the adversarial review and the second opinion. Most of the project was then explored, implemented and run by Gemini 4 Neon.
+
 ## Credits & Data Licenses
 
 - Code & evaluations: MIT ([`LICENSE`](LICENSE)). Third-party `Qwen3-4B` neuron explanations & causal scores: [`Ulto85/neurons-kinda-clean`](https://github.com/Ulto85/neurons-kinda-clean) (commit `85c71b7`, MIT, [`data/qwen4b/ulto85/LICENSE`](data/qwen4b/ulto85/LICENSE)).
