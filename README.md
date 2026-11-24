@@ -2,6 +2,8 @@
 
 A high score on Goodfire's detection test shows a label fits a neuron's strongest activations. It does not show the label fits the rest. On Qwen3-4B and Qwen3-1.7B, labels score 0.78 to 0.84 on the strongest activations. Those activations carry 29 to 41% of the neuron's downstream effect. On weaker activations, accuracy falls toward chance.
 
+**Video explainer (3:56):** [youtu.be/pHoC1WHvplQ](https://youtu.be/pHoC1WHvplQ)
+
 ![Detection accuracy vs. exact float32 KL share by band](figures/main_detection_vs_kl_by_band.png)
 
 ## Summary
