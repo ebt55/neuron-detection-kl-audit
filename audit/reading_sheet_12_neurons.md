@@ -2,6 +2,8 @@
 
 Twelve deterministically selected `Qwen/Qwen3-4B` neurons from `Ulto85/neurons-kinda-clean` (MIT): 4 with `top100 == 1.000` and high `sim_cal_rec` (including `info`, `k=26`), 4 with `top100 == 1.000` and negative `sim_cal_rec` (including `PCR`, `k=23`, and the minimum `-7.110`), and 4 failing top-100 detection (`top100 < 0.800`) spread across layers and causal outcomes. Snippets come from `HuggingFaceFW/fineweb` (`sample/10BT/000_00000.parquet`, ODC-By). KL shares are loaded from `results/qwen4b/band_kl_4b_all278.json` (`n = 278` neurons).
 
+> **Redaction note (24 Nov 2026).** Snippets are quoted FineWeb web text. The names of five private people in four news snippets (two crime victims, a man charged after an arrest, a police officer and a bystander) are replaced with `[name]` here. The marked tokens and the judge verdicts are unchanged; in the first of these snippets the marked token is a letter inside the redacted name. The raw data files under `data/` are unchanged.
+
 ## Overview Table
 
 | # | Group | `k` | Layer / Neuron | Polarity | `top100` | `p99.9+` | `p97–99` | `sim_cal_rec` | `active` | `strong20` | KL `p99.9+` / `p97–99.9` / `p75–97` / `<p75` |
@@ -83,7 +85,7 @@ Twelve deterministically selected `Qwen/Qwen3-4B` neurons from `Ulto85/neurons-k
 
 **`p97–99` Positive Snippets (5 sampled):**
 1. `L35_N7008_pos` (`pair_idx=0`) | `act_dir=0.373` (`0.1%` of max) | judge: `CORRECT` (pred `A`, pos `A`)
-   - ` Punjab due to caste. ⏎ Kolhapur: Islampur court has sentenced a man. ⏎ ten witnesses and a DNA report of his daughter and her baby. The girl had delivered a child, the court had observed. According to the prosecution. ⏎ Kolhapur: Twenty-six year old Ganesh<< N>>mdeo Kumbhar was found murdered`
+   - ` Punjab due to caste. ⏎ Kolhapur: Islampur court has sentenced a man. ⏎ ten witnesses and a DNA report of his daughter and her baby. The girl had delivered a child, the court had observed. According to the prosecution. ⏎ Kolhapur: Twenty-six year old [name]<< N>>[name] was found murdered`
 2. `L35_N7008_pos` (`pair_idx=2`) | `act_dir=0.371` (`0.1%` of max) | judge: `CORRECT` (pred `B`, pos `B`)
    - ` is sweet but not cloyingly so and is great with or without nuts then look no further. ⏎ This is a recipe I have tweaked and played with over time to make the perfect brownie as the base for a hot fudge brownie sundae! Some of my other recipes, while great on<< their>> own, were too sweet when paired with`
 3. `L35_N7008_pos` (`pair_idx=4`) | `act_dir=0.535` (`0.2%` of max) | judge: `CORRECT` (pred `B`, pos `B`)
@@ -113,7 +115,7 @@ Twelve deterministically selected `Qwen/Qwen3-4B` neurons from `Ulto85/neurons-k
 3. `L08_N2134_pos` (`pair_idx=10`) | `act_dir=9.125` (`48.0%` of max) | judge: `CORRECT` (pred `A`, pos `A`)
    - ` a corridor traveled by 200,000 vehicles a day. ⏎ The $173 million project to improve the I-390/I-490/Route 31 interchange near Rochester is designed to allow “southbound through traffic to travel above the busy interchange and<< avoid>> vehicles merging and exiting the highway,” says`
 4. `L08_N2134_pos` (`pair_idx=14`) | `act_dir=10.375` (`54.6%` of max) | judge: `CORRECT` (pred `B`, pos `B`)
-   - ` A chase ensued, followed by a crash and a physical assault. The dashboard cameras showed officers beating Collins, however, the views from one camera were obscured because Officer Deutsch turned the lens away. The beating left Collins with bruises and he developed blood clots. Collins was charged with three traffic warrants, ev<<ading>> arrest, and possession of marijuana. D`
+   - ` A chase ensued, followed by a crash and a physical assault. The dashboard cameras showed officers beating [name], however, the views from one camera were obscured because Officer [name] turned the lens away. The beating left [name] with bruises and he developed blood clots. [name] was charged with three traffic warrants, ev<<ading>> arrest, and possession of marijuana. D`
 5. `L08_N2134_pos` (`pair_idx=19`) | `act_dir=5.094` (`26.8%` of max) | judge: `CORRECT` (pred `A`, pos `A`)
    - ` meals, or 12 ounces total, of fish or shellfish a week. They should limit high-mercury fish to one serving per week. ⏎ To be safest, however, The Green Guide and the Environmental Working Group recommend limiting moderate-mercury fish to one meal a month, and bypass<<ing>> high-mercury fish completely. In`
 
@@ -189,7 +191,7 @@ Twelve deterministically selected `Qwen/Qwen3-4B` neurons from `Ulto85/neurons-k
 4. `L00_N8146_pos` (`pair_idx=14`) | `act_dir=0.652` (`20.0%` of max) | judge: `CORRECT` (pred `B`, pos `B`)
    - `ightyText 5.3.1 (32-bit) LATEST ⏎ Windows 7 / Windows 8 / Windows 10 ⏎ User Rating:Click to vote ⏎ Author / Product: ⏎ MightyText (32-bit) 2020 full offline installer setup for<< PC>> ⏎ Features and Highlights ⏎ Get notified on`
 5. `L00_N8146_pos` (`pair_idx=19`) | `act_dir=0.605` (`18.5%` of max) | judge: `CORRECT` (pred `A`, pos `A`)
-   - ` Francisco Police Department announced that they believe they have found the people responsible for killing Canadian backpacker Audrey Carey in Golden Gate Park last weekend — and that the same suspects are implicated in another high-profile Bay Area slaying on Monday. ⏎ If you haven't already read about Carey, who was found dead near G<<GP>>'s bison paddock on Saturday morning`
+   - ` Francisco Police Department announced that they believe they have found the people responsible for killing Canadian backpacker [name] in Golden Gate Park last weekend — and that the same suspects are implicated in another high-profile Bay Area slaying on Monday. ⏎ If you haven't already read about [name], who was found dead near G<<GP>>'s bison paddock on Saturday morning`
 
 **`p97–99` Positive Snippets (5 sampled):**
 1. `L00_N8146_pos` (`pair_idx=0`) | `act_dir=0.048` (`1.5%` of max) | judge: `WRONG` (pred `B`, pos `A`)
@@ -309,7 +311,7 @@ Twelve deterministically selected `Qwen/Qwen3-4B` neurons from `Ulto85/neurons-k
 4. `L12_N3077_neg` (`pair_idx=7`) | `act_dir=0.246` (`1.8%` of max) | judge: `WRONG` (pred `B`, pos `A`)
    - ` that implied Microsoft's Kinect motion-control camera for the Xbox 360 might recognize sign language. ⏎ In the patent, an illustration depicts a user spelling words using their hands. ⏎ "The user...is making a gesture with his left hand...to signal the character 'a' in American Sign Language (AS<<L>>)," reads the accompanying text. The patent`
 5. `L12_N3077_neg` (`pair_idx=9`) | `act_dir=0.279` (`2.0%` of max) | judge: `CORRECT` (pred `B`, pos `B`)
-   - ` and before he disappeared in 1995, sightings of the mobster occurred on a daily basis. ⏎ “I’ve seen him in the flesh. Broadway, Dorchester. Up around Cathy Grieg’s house on Fourth Street,” said Maureen Manning, walking her dog down Broadway. ⏎ Whitey Bul<<ger>> was both admired and feared in this neighborhood`
+   - ` and before he disappeared in 1995, sightings of the mobster occurred on a daily basis. ⏎ “I’ve seen him in the flesh. Broadway, Dorchester. Up around Cathy Grieg’s house on Fourth Street,” said [name], walking her dog down Broadway. ⏎ Whitey Bul<<ger>> was both admired and feared in this neighborhood`
 
 ## Group C: Failing Top-100 Detection (`< 0.800`)
 
